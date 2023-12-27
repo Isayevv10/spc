@@ -1,0 +1,63 @@
+@import "@/styles/base/_reset.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 60px 35px 60px;
+  background-color: #5c5a5a;
+  color: #fff;
+
+  &__item--contact {
+    &-title {
+      margin-bottom: 11px;
+      font-size: 25px;
+      padding: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    &-details div {
+      display: flex;
+      column-gap: 10px;
+      margin-top: 8px;
+      font-family: 16px;
+    }
+  }
+
+  &__item--links {
+    &-title {
+      margin-bottom: 11px;
+      font-size: 25px;
+      padding: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    &-design {
+      li {
+        list-style: none;
+        padding: 12px;
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__item--follow {
+    &-title {
+      margin-bottom: 11px;
+      font-size: 25px;
+      padding: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    &-details div {
+      display: flex;
+      column-gap: 10px;
+      margin-top: 8px;
+      font-family: 16px;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "@/styles/base/_reset.scss";
+
+.home {
+  margin-top: 120px;
+  background-color: #f2f7f9;
+  border: 1px solid transparent;
+  height: 100%;
+  width: 100%;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    background-color: #cdcaca;
+    padding: 45px;
+
+    .item-1 {
+      color: #263640;
+      font-weight: 600;
+
+      p:nth-child(1) {
+        font-size: 30px;
+      }
+      p:nth-child(2) {
+        font-size: 14px;
+        margin-top: 20px;
+        line-height: 1.4em;
+      }
+      .downloads {
+        margin-top: 20px;
+        font-size: 14px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        &-protection {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .item-2 {
+      .client,
+      .depo,
+      .worker {
+        display: flex;
+        font-size: 25px;
+        font-weight: bolder;
+        color: #263640;
+
+        div:nth-child(1) {
+          margin-right: 14px;
+        }
+      }
+
+      .client {
+        .client-item-2 {
+          p:nth-child(1) {
+            margin-bottom: 5px;
+          }
+
+          p:nth-child(2) {
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+
+      .worker {
+        margin: 30px 0;
+        width: 100%;
+        .worker-item-2 {
+          p:nth-child(1) {
+            margin-bottom: 5px;
+          }
+          p:nth-child(2) {
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+
+      .depo {
+        .depo-item-2 {
+          p:nth-child(1) {
+            margin-bottom: 5px;
+          }
+          p:nth-child(2) {
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  &__brands {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    div {
+      border-radius: 5px;
+      img {
+        object-fit: fill;
+      }
+    }
+  }
+}

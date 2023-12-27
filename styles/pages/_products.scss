@@ -1,0 +1,31 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
+  background-color: #cdcaca;
+  padding: 20px;
+  font-weight: 700;
+
+  h4 {
+    font-size: 21px;
+    color: #dd0b2e;
+    border-bottom: 2px solid;
+    font-weight: 600;
+    padding-bottom: 8px;
+    font-weight: bolder;
+  }
+
+  ul {
+    li {
+      font-size: 18px;
+      margin: 8px 0;
+      color: #524f4f;
+      line-height: 1.4em;
+      a {
+        color: #524f4f;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+  }
+}

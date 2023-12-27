@@ -1,0 +1,33 @@
+@import "@/styles/base/_reset.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  background-color: #f00;
+  height: 66px;
+
+  &--links {
+    display: flex;
+    column-gap: 30px;
+    margin: 26px 0;
+
+    li {
+      list-style: none;
+      border: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid;
+        color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        line-height: 10px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
