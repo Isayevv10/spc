@@ -28,7 +28,6 @@ export default async function ProductDetails({ params: { slug } }: Props) {
   `;
 
   const products: IProduct = await client.fetch(query, { slug });
-  console.log(products.description);
 
   // console.log(products);
 
@@ -38,7 +37,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
   //   const query: string = groq`
   //     *[_type == "product" && slug.current == $slug][0] {
   //       name,
-  //       price,
+  //       price,#
   //       description,
   //       "image":images,
   //       "id": _id

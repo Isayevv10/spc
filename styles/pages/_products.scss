@@ -1,30 +1,46 @@
 .products {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-around;
-  background-color: #cdcaca;
-  padding: 20px;
-  font-weight: 700;
+  padding: 50px;
+  background-color: #dad6d1;
 
-  h4 {
-    font-size: 21px;
-    color: #dd0b2e;
-    border-bottom: 2px solid;
-    font-weight: 600;
-    padding-bottom: 8px;
-    font-weight: bolder;
-  }
+  &__shoes {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    font-weight: 700;
 
-  ul {
-    li {
-      font-size: 18px;
-      margin: 8px 0;
-      color: #524f4f;
-      line-height: 1.4em;
+    .list {
+      border: 1px solid #e1e1e1;
+      padding: 0 15px;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+        background-color: rgba(#fff, 0.6);
+        border-radius: 5px;
+      }
+
       a {
-        color: #524f4f;
         text-decoration: none;
-        outline: none;
+        color: #000;
+      }
+
+      &__image {
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+      }
+
+      &__desc {
+        margin-bottom: 20px;
+        h5 {
+          font-size: 18px;
+          font-weight: 700;
+          height: 21px;
+        }
+        p {
+          margin-top: 7px;
+          font-weight: 500;
+        }
       }
     }
   }

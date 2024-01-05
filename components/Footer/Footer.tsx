@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/about">Haqqımızda</Link>
           </li>
           <li>
-            <Link href="/products">Məhsullar</Link>
+            <Link href="/shoes">Məhsullar</Link>
           </li>
           <li>
             <Link href="/contact"> Əlaqə</Link>
@@ -33,13 +33,13 @@ const Footer = () => {
             <div>
               <BsTelephone size="18" />
             </div>
-            <div>+994 50 265 34 87</div>
+            <div>+994 51 215 20 74</div>
           </div>
           <div>
             <div>
               <MdOutlineEmail size="18" />
             </div>
-            <div>sales@createindustry.az</div>
+            <div>info@createindustry.az</div>
           </div>
           <div>
             <div>

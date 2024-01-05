@@ -1,11 +1,12 @@
 .details__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  // column-gap: 60px;
+  // padding-left: 60px;
+  // padding-right: 60px;
+  // padding-top: 25px;
+  // padding-bottom: 25px;
+  padding: 75px 205px;
 
   &--item-2 {
     border: 1px solid;

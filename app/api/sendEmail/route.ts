@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from,
-      to: "elvin.bekirov@spcgroup.az",
+      to: "isayevallahverdi2002@gmail.com",
       subject,
       html: `<div><p>Name: ${uname}</p>
                   <p>Number: ${number}</p>

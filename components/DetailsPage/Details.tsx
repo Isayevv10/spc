@@ -20,9 +20,14 @@ const Details = ({ products }: IProductProps) => {
           {products?.image[0] ? (
             <Image
               src={urlFor(products?.image[seletedItem]!).url()!}
-              alt={"salam"}
-              width={450}
-              height={450}
+              alt={"shoes"}
+              width={580}
+              height={0}
+              style={{
+                height: "580px",
+                width: "580px",
+                objectFit: "contain",
+              }}
             />
           ) : (
             <></>
@@ -40,7 +45,7 @@ const Details = ({ products }: IProductProps) => {
             >
               <Image
                 src={urlFor(products?.image[index]).url()}
-                alt={"salam"}
+                alt={"shoes"}
                 width={100}
                 height={100}
               />

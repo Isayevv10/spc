@@ -1,0 +1,10 @@
+.leftpanel__container {
+    // border: 1px solid red;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+
+  div {
+    height: auto;
+    // border: 1px solid;
+  }
+}

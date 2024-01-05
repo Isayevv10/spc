@@ -5,4 +5,5 @@ export interface IProduct {
   price: number;
   id: string;
   slug: string;
+  mainImage: string;
 }

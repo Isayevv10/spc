@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "@/styles/pages/_contact.scss";
+import Image from "next/image";
 
 const Contact = () => {
   const [emailData, setEmailData] = useState({
@@ -24,16 +25,15 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      if (
-        emailData.from == "" ||
-        emailData.message == "" ||
-        emailData.number == "" ||
-        emailData.subject == "" ||
-        emailData.uname == ""
-      ) {
+      // if (
+      //   emailData.from == "" ||
+      //   emailData.message == "" ||
+      //   emailData.number == "" ||
+      //   emailData.subject == "" ||
+      //   emailData.uname == ""
+      // ) {
+      // }
 
-        
-      }
       const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: {
@@ -59,30 +59,22 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <div className="contact__find">
-        <p>Əlaqə</p>
-        <p>
-          Xidmətlərimiz haqqında daha çox məlumat əldə etmək üçün, zəhmət
-          olmasa, aşağıdakı formu təfərrüatlı doldurun və nümayəndəmizdən biri
-          sizə qısa zamanda geri dönüş edəcək.
-        </p>
-      </div>
       <div className="contact__mail">
         <div className="grid__form">
           <div className="item-1">
+            <label htmlFor="uname">Ad Soyad</label>
             <input
               type="text"
               name="uname"
-              placeholder="Your Name"
               value={emailData.uname}
               required
               onChange={handleChange}
             />
           </div>
           <div className="item-2">
+            <label htmlFor="uname">Şirkət</label>
             <input
               type="text"
-              placeholder="Your Company"
               name="subject"
               value={emailData.subject}
               required
@@ -90,31 +82,31 @@ const Contact = () => {
             />
           </div>
           <div className="item-3">
+            <label htmlFor="uname">Email</label>
             <input
               type="email"
               name="from"
-              placeholder="Your Email"
               value={emailData.from}
               required
               onChange={handleChange}
             />
           </div>
           <div className="item-4">
+            <label htmlFor="uname">Telefon</label>
             <input
               type="text"
               name="number"
-              placeholder="Your Contact Number"
               value={emailData.number}
               required
               onChange={handleChange}
             />
           </div>
           <div className="item-5">
+            <label htmlFor="uname">Mesajınız</label>
             <textarea
               name="message"
               cols={30}
-              rows={10}
-              placeholder="Your Message"
+              rows={7}
               value={emailData.message}
               required
               onChange={handleChange}
@@ -123,8 +115,34 @@ const Contact = () => {
         </div>
 
         <button type="submit" className="btn__submit" onClick={handleSubmit}>
-          SUBMIT
+          Göndər
         </button>
+      </div>
+
+      <div className="contact__info">
+        <div className="contact__info--adres">
+          <Image src="/images/adres.png" width={70} height={70} alt="adres" />
+          <p>Abşeron rayonu, Qobu qəsəbəsi</p>
+        </div>
+
+        <div className="contact__info--detail">
+          <Image
+            src="/images/contact.png"
+            alt="contact"
+            width={70}
+            height={70}
+          />
+
+          <div>
+            <h1>Telefon</h1>
+            <p>+994 50 265 34 87</p>
+          </div>
+
+          <div>
+            <h1>Email</h1>
+            <p>sales@createindustry.az</p>
+          </div>
+        </div>
       </div>
     </div>
   );
