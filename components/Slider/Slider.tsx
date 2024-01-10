@@ -18,7 +18,7 @@ interface Sirvan {
   jupiter: SpecificProd;
 }
 
-export default function Slider2({ sirvan, herbi, jupiter }: Sirvan) {
+export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
   return (
     <>
       <Swiper

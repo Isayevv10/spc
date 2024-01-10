@@ -24,14 +24,10 @@
         margin-bottom: 22px;
         color: #333;
       }
-      &-price {
-        font-size: 27px;
-        font-weight: 500;
-        margin-bottom: 15px;
-      }
       &-desc {
         font-size: 19px;
         font-weight: 500;
+        border: 1px solid;
       }
     }
 
@@ -51,6 +47,5 @@
     border-bottom: 2px solid rgba($color: #f00, $alpha: 1);
     padding-bottom: 13px;
     letter-spacing: 0.02em;
-    // border: 1px solid;
   }
 }

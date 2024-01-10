@@ -6,7 +6,6 @@ import "@/styles/pages/_details.scss";
 import "@/styles/components/_details.scss";
 import Details from "@/components/DetailsPage/Details";
 import Slider from "@/components/Slider/Slider";
-import Slider2 from "@/components/Slider/Slider";
 
 type Props = {
   params: {
@@ -79,9 +78,8 @@ export default async function ProductDetails({ params: { slug } }: Props) {
         </div>
         <div className="details__info--item-2">
           <div className="details__info--item-2-name">{products?.name}</div>
-          <div className="details__info--item-2-price">{products?.price} ₼</div>
           <div className="details__info--item-2-desc">
-            {products?.description}
+            <pre>{products?.description}</pre>
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
       </div>
 
       <div className="related__products">
-        <Slider2 sirvan={sirvan} herbi={herbi} jupiter={jupiter} />
+        <Slider sirvan={sirvan} herbi={herbi} jupiter={jupiter} />
       </div>
     </div>
   );
