@@ -6,6 +6,7 @@ import { groq } from "next-sanity";
 import { IProduct } from "@/types/Product";
 import Image from "next/image";
 import { truncate } from "@/helpers/truncate";
+import { v4 } from "uuid";
 
 const getAllProductsQueries = `
                   *[_type == "product" && category->name == 'Shoes'] {
@@ -26,14 +27,13 @@ export const revalidate = 60;
 
 export default async function Products() {
   const allDatas: IProduct[] = await getAllProductsItems();
-  console.log(allDatas);
 
   return (
     <div className="products">
       <div className="products__shoes">
-        {allDatas?.map((item, index) => {
+        {allDatas?.map((item) => {
           return (
-            <div className="list">
+            <div className="list" key={v4()}>
               <Link href={`/shoes/${item?.slug}`}>
                 <div className="list__image">
                   <Image

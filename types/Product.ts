@@ -7,3 +7,14 @@ export interface IProduct {
   slug: string;
   mainImage: string;
 }
+
+export interface SpecificProd {
+  status: string;
+  value: [
+    {
+      mainImage: string;
+      slug: string;
+      name: string;
+    }
+  ];
+}

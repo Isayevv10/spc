@@ -5,6 +5,7 @@ import { IProduct } from "@/types/Product";
 import Image from "next/image";
 import React, { useState } from "react";
 import "@/styles/components/_details.scss";
+import { v4 } from "uuid";
 
 interface IProductProps {
   products: IProduct | undefined;
@@ -23,9 +24,10 @@ const Details = ({ products }: IProductProps) => {
               alt={"shoes"}
               width={580}
               height={0}
+              unoptimized={true}
               style={{
-                height: "580px",
-                width: "580px",
+                height: "540px",
+                width: "540px",
                 objectFit: "contain",
               }}
             />
@@ -39,7 +41,7 @@ const Details = ({ products }: IProductProps) => {
         {products?.image?.map((item, index) => {
           return (
             <div
-              key={index}
+              key={v4()}
               className="eachThumbs"
               onClick={() => setSelectedItem(index)}
             >
@@ -48,6 +50,7 @@ const Details = ({ products }: IProductProps) => {
                 alt={"shoes"}
                 width={100}
                 height={100}
+                unoptimized={true}
               />
             </div>
           );
