@@ -1,0 +1,49 @@
+.search {
+  background-color: #5c5a5a;
+  display: flex;
+  justify-content: right;
+  outline: none;
+  padding: 3px 200px 3px 0;
+
+  input {
+    height: 36px;
+    min-width: 150px;
+    max-width: 300px;
+    text-indent: 10px;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    min-width: 166px;
+    max-width: 300px;
+    z-index: 999;
+    margin-top: 1px;
+    background-color: #fff;
+
+    .search__product {
+      margin-top: 6px;
+      margin-bottom: 3px;
+
+      &:hover {
+        border: 1px solid #f00;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      &--name {
+        padding-left: 7px;
+      }
+
+      &--img {
+        padding-left: 7px;
+        object-fit: cover;
+      }
+    }
+  }
+}

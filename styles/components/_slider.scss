@@ -1,61 +1,63 @@
-.swiper {
-  width: 75%;
-  height: 100%;
-  margin: 45px auto;
-  // border: 1px solid blue;
-  padding: 0 23px;
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: red !important;
-  }
-
-  .swiper-button-next {
-    padding-left: 3%;
-  }
-  .swiper-button-prev {
-    padding-right: 3%;
-  }
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 17px;
-  background: #fff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    transform: scale(0.98);
-    box-shadow: 2px 2px rgba($color: #f00, $alpha: 0.7),
-      -2px -2px rgba($color: #f00, $alpha: 0.7);
-    transition: all 0.3s ease-in-out;
-  }
-
-  img {
-    display: block;
-    width: 100%;
+.container__slider {
+  .swiper {
+    width: 75%;
     height: 100%;
-    object-fit: contain;
-    aspect-ratio: 3/2;
-  }
+    margin: 45px auto;
+    // border: 1px solid blue;
+    padding: 0 23px;
 
-  a {
-    text-decoration: none;
-    color: #000;
-    padding-bottom: 2px;
-  }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: red !important;
+    }
 
-  .card {
-    &__name {
-      margin-top: 2px;
-      font-size: 18px;
+    .swiper-button-next {
+      padding-left: 3%;
+    }
+    .swiper-button-prev {
+      padding-right: 3%;
     }
   }
-}
 
-// .slider__container {
-//   border: 1px solid red;
-// }
+  .swiper-slide {
+    text-align: center;
+    font-size: 17px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: 2px 2px rgba($color: #f00, $alpha: 0.7),
+        -2px -2px rgba($color: #f00, $alpha: 0.7);
+      transition: all 0.3s ease-in-out;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      aspect-ratio: 3/2;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      padding-bottom: 2px;
+    }
+
+    .card {
+      &__name {
+        margin-top: 2px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  // .slider__container {
+  //   border: 1px solid red;
+  // }
+}

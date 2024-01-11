@@ -20,7 +20,7 @@ interface Sirvan {
 
 export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
   return (
-    <>
+    <div className="container__slider">
       <Swiper
         spaceBetween={10}
         navigation={true}
@@ -70,6 +70,6 @@ export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
           );
         })}
       </Swiper>
-    </>
+    </div>
   );
 }

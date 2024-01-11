@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import "@/styles/components/_carousel.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "@/styles/components/_carousel.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";

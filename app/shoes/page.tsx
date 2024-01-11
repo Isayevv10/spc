@@ -6,6 +6,7 @@ import { groq } from "next-sanity";
 import { IProduct } from "@/types/ProductTypes";
 import Image from "next/image";
 import { v4 } from "uuid";
+import { Search } from "@/components/Search/Search";
 
 const getAllProductsQueries = `
                   *[_type == "product" && category->name == 'Shoes'] {
@@ -28,31 +29,36 @@ export default async function Products() {
   const allDatas: IProduct[] = await getAllProductsItems();
 
   return (
-    <div className="products">
-      <div className="products__shoes">
-        {allDatas?.map((item) => {
-          return (
-            <div className="list" key={v4()}>
-              <Link href={`/shoes/${item?.slug}`}>
-                <div className="list__image">
-                  <Image
-                    src={urlFor(item?.image[0]).url()}
-                    width={200}
-                    height={200}
-                    alt="productPic"
-                  />
-                </div>
-                <div className="list__desc">
-                  <h5>{item?.name}</h5>
-                  <div>
-                    <p>{item?.description.brand}</p>
-                    <p>{item?.description.standart}...</p>
+    <div>
+      <Search />
+
+      <div className="products">
+        <div className="products__shoes">
+          {allDatas?.map((item) => {
+            return (
+              <div className="list" key={v4()}>
+                <Link href={`/shoes/${item?.slug}`}>
+                  <div className="list__image">
+                    <Image
+                      src={urlFor(item?.image[0]).url()}
+                      width={210}
+                      height={210}
+                      alt="productPic"
+                      unoptimized={true}
+                    />
                   </div>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+                  <div className="list__desc">
+                    <h5>{item?.name}</h5>
+                    <div>
+                      <p>{item?.description.brand}</p>
+                      <p>{item?.description.standart}...</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

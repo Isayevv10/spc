@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import "@/styles/components/_search.scss";
 import { groq } from "next-sanity";
 import { IProduct } from "@/types/ProductTypes";
 import { client, urlFor } from "@/app/lib/sanity";
@@ -24,14 +25,6 @@ export const Search = () => {
   const [products, setProducts] = useState<IProduct[] | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  //   useOutsideClick({
-  //     ref,
-  //     handler: () => {
-  //       setIsModalOpen(false);
-  //       setProducts([]);
-  //     },
-  //   });
-
   const fetchProducts = async () => {
     setIsLoading(true);
 
@@ -47,6 +40,8 @@ export const Search = () => {
     const timeout: number = window.setTimeout(() => {
       if (searchText.trim().length >= 2) {
         fetchProducts();
+      } else {
+        setIsModalOpen(false);
       }
     }, 1300);
 
@@ -54,38 +49,30 @@ export const Search = () => {
   }, [searchText]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "right",
-        marginRight: "140px",
-        border: "3px solid #DAD6D1",
-        outline: "none",
-        backgroundColor: "#5c5a5a",
-      }}
-    >
+    <div className="search">
       <div ref={ref}>
         <input
-          type="text"
+          type="search"
           placeholder="Axtar..."
           value={searchText}
           onClick={() => setIsModalOpen(true)}
           onChange={(e) => setSearchText(e.target.value)}
         />
-
-        {isModalOpen && (
-          <div>
-            {products?.length === 0 ? (
-              isLoading ? (
-                <>Loading...</>
+        <div className="dropdown-content">
+          {isModalOpen && (
+            <div>
+              {products?.length === 0 ? (
+                isLoading ? (
+                  <>Loading...</>
+                ) : (
+                  <>No Products Found</>
+                )
               ) : (
-                <>No Products Found</>
-              )
-            ) : (
-              <SearchedProductsList products={products} />
-            )}
-          </div>
-        )}
+                <SearchedProductsList products={products} />
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -99,20 +86,19 @@ const SearchedProductsList = ({ products }: SearchedProductsListProps) => {
   return (
     <>
       {products?.map((product) => (
-        <Link key={product.id} href={`/shoes/${product.slug}`}>
-          <div>
-            <div>
+        <div className="search__product" key={product.id}>
+          <Link key={product.id} href={`/shoes/${product.slug}`}>
+            <div className="search__product--img">
               <Image
-                alt="salam"
+                alt="productPic"
                 src={urlFor(product?.image[0]).url()}
-                width={25}
-                height={25}
+                width={90}
+                height={90}
               />
-              <p>{product.name}</p>
             </div>
-            <div>{/* <p>{product?.category?.name}</p> */}</div>
-          </div>
-        </Link>
+            <p className="search__product--name">{product.name}</p>
+          </Link>
+        </div>
       ))}
     </>
   );
