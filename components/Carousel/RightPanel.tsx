@@ -3,7 +3,7 @@ import "@/styles/components/_rightpanel.scss";
 import Image from "next/image";
 import { client, urlFor } from "@/app/lib/sanity";
 import { groq } from "next-sanity";
-import { IProduct } from "@/types/Product";
+import { IProduct } from "@/types/ProductTypes";
 import Link from "next/link";
 
 const getSirvanQuery = `

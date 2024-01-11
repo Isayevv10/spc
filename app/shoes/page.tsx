@@ -3,9 +3,8 @@ import "@/styles/pages/_products.scss";
 import Link from "next/link";
 import { client, urlFor } from "../lib/sanity";
 import { groq } from "next-sanity";
-import { IProduct } from "@/types/Product";
+import { IProduct } from "@/types/ProductTypes";
 import Image from "next/image";
-import { truncate } from "@/helpers/truncate";
 import { v4 } from "uuid";
 
 const getAllProductsQueries = `
@@ -45,7 +44,10 @@ export default async function Products() {
                 </div>
                 <div className="list__desc">
                   <h5>{item?.name}</h5>
-                  <p>{truncate(item?.description)}</p>
+                  <div>
+                    <p>{item?.description.brand}</p>
+                    <p>{item?.description.standart}...</p>
+                  </div>
                 </div>
               </Link>
             </div>

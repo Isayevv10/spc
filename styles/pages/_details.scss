@@ -14,25 +14,32 @@
     // padding-bottom: 25px;
 
     &--item-2 {
-      border: 1px solid;
+      // border: 1px solid;
       color: black;
       width: 550px;
 
       &-name {
-        font-weight: 700;
-        font-size: 30px;
-        margin-bottom: 22px;
+        font-weight: 800;
+        font-size: 31px;
+        margin-bottom: 23px;
         color: #333;
       }
       &-desc {
         font-size: 19px;
         font-weight: 500;
-        border: 1px solid;
+        // border: 1px solid;
+        div {
+          margin-top: 7px;
+          letter-spacing: 0.03em;
+          span {
+            font-weight: 600;
+          }
+        }
       }
     }
 
     &--item-1 {
-      border: 1px solid;
+      // border: 1px solid;
       width: 550px;
     }
   }

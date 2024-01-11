@@ -35,12 +35,49 @@ export default {
     {
       name: "description",
       title: "Description",
-      type: "string",
-    },
-    {
-      name: "price",
-      title: "Price",
-      type: "number",
+      type: "object",
+      fields: [
+        {
+          name: "brand",
+          title: "Brend",
+          type: "string",
+        },
+        {
+          name: "model",
+          title: "Model",
+          type: "string",
+        },
+        {
+          name: "standart",
+          title: "Standart",
+          type: "string",
+        },
+        {
+          name: "topMaterial",
+          title: "Üst material",
+          type: "string",
+        },
+        {
+          name: "bottomMaterial",
+          title: "Alt material",
+          type: "string",
+        },
+        {
+          name: "sole",
+          title: "İçlik",
+          type: "string",
+        },
+        {
+          name: "protection",
+          title: "Qorunma dərəcəsi",
+          type: "string",
+        },
+        {
+          name: "size",
+          title: "Ölçü",
+          type: "string",
+        },
+      ],
     },
     {
       name: "category",

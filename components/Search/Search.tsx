@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { groq } from "next-sanity";
-import { IProduct } from "@/types/Product";
+import { IProduct } from "@/types/ProductTypes";
 import { client, urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
 

@@ -1,8 +1,18 @@
+export interface IDescription {
+  brand: string;
+  model: string;
+  standart: string;
+  bottomMaterial: string;
+  topMaterial: string;
+  sole: string;
+  protection: string;
+  size: string;
+}
+
 export interface IProduct {
   name: string;
   image: string[];
-  description: string;
-  price: number;
+  description: IDescription;
   id: string;
   slug: string;
   mainImage: string;

@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { v4 } from "uuid";
 import { Navigation } from "swiper/modules";
-import { SpecificProd } from "@/types/Product";
+import { SpecificProd } from "@/types/ProductTypes";
 import { urlFor } from "@/app/lib/sanity";
 
 interface Sirvan {

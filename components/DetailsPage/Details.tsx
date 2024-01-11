@@ -1,7 +1,7 @@
 "use client";
 
 import { urlFor } from "@/app/lib/sanity";
-import { IProduct } from "@/types/Product";
+import { IProduct } from "@/types/ProductTypes";
 import Image from "next/image";
 import React, { useState } from "react";
 import "@/styles/components/_details.scss";
