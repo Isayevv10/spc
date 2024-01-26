@@ -1,22 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import "@/styles/components/_logo.scss";
 
 const Logo = () => {
   return (
-    <div>
+    <div className="logo">
       <Link href="/">
         <Image
           alt="createLogo"
           src={"/images/logo.png"}
-          width={125}
+          width={0}
           height={0}
-          style={{
-            height: "60px",
-            margin: "3px",
-            width: "125px",
-            objectFit: "contain",
-          }}
+          unoptimized={true}
+          style={{ width: "127px" }}
         />
       </Link>
     </div>

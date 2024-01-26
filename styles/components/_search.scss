@@ -1,18 +1,24 @@
 .search {
-  background-color: #5c5a5a;
   display: flex;
   justify-content: right;
   outline: none;
-  padding: 3px 200px 3px 0;
 
   input {
     height: 36px;
     min-width: 150px;
     max-width: 300px;
     text-indent: 10px;
-    border: none;
+    background-color: #f00;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: white;
+
     &:focus {
       outline: none;
+    }
+
+    &::placeholder {
+      color: #fff;
     }
   }
 
@@ -23,21 +29,29 @@
     z-index: 999;
     margin-top: 1px;
     background-color: #fff;
+    border-radius: 4px;
 
     .search__product {
       margin-top: 6px;
       margin-bottom: 3px;
+      display: flex;
 
       &:hover {
-        border: 1px solid #f00;
+        border: 2px solid #f00;
+        border-radius: 5px;
       }
 
       a {
         text-decoration: none;
+        display: flex;
       }
 
       &--name {
         padding-left: 7px;
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        color: red;
       }
 
       &--img {

@@ -1,7 +1,7 @@
 @import "@/styles/base/_reset.scss";
 
 .home {
-  margin-top: 50px;
+  margin-top: 25px;
   background-color: #f2f7f9;
   border: 1px solid transparent;
   height: 100%;
@@ -12,7 +12,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 35px;
     background-color: #cdcaca;
-    padding: 45px;
+    padding: 45px 180px;
 
     .item-1 {
       color: #263640;
@@ -98,14 +98,38 @@
 
   &__brands {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    column-gap: 60px;
     margin-top: 12px;
     margin-bottom: 12px;
 
     div {
       border-radius: 5px;
+      // border: 1px solid;
       img {
         object-fit: fill;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .home__content {
+    padding: 45px 120px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .home__content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 35px;
+
+    .item-2 {
+      .client,
+      .depo,
+      .worker {
+        font-size: 22px;
       }
     }
   }

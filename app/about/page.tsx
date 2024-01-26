@@ -1,13 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import "@/styles/pages/_about.scss";
-import { Search } from "@/components/Search/Search";
 
 const About = () => {
   return (
     <>
-      <Search />
-
       <div className="about">
         <div className="about__content">
           <div className="about__content__item-1">

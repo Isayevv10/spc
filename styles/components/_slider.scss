@@ -3,7 +3,6 @@
     width: 75%;
     height: 100%;
     margin: 45px auto;
-    // border: 1px solid blue;
     padding: 0 23px;
 
     .swiper-button-next,
@@ -11,9 +10,16 @@
       color: red !important;
     }
 
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px !important;
+      width: 20px !important;
+    }
+
     .swiper-button-next {
       padding-left: 3%;
     }
+
     .swiper-button-prev {
       padding-right: 3%;
     }

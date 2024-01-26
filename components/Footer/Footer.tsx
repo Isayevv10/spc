@@ -7,6 +7,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaRegCopyright } from "react-icons/fa6";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -31,27 +32,36 @@ const Footer = () => {
         <div className="footer__item--contact-details">
           <div>
             <div>
-              <BsTelephone size="18" />
+              <Image
+                src="/icons/phone.png"
+                alt="phone"
+                width={25}
+                height={25}
+              />
             </div>
-            <div>+994 51 215 20 74</div>
+            <div className="context-info">+994 51 215 20 74</div>
           </div>
           <div>
             <div>
-              <MdOutlineEmail size="18" />
+              <Image
+                src="/icons/msgfooter.png"
+                alt="phone"
+                width={25}
+                height={25}
+              />
             </div>
-            <div>info@createindustry.az</div>
+            <div className="context-info">info@createindustry.az</div>
           </div>
           <div>
             <div>
-              <CiLocationOn size="18" />
+              <Image
+                src="/icons/location.png"
+                alt="phone"
+                width={25}
+                height={25}
+              />
             </div>
-            <div> Abşeron rayonu, Qobu qəsəbəsi</div>
-          </div>
-          <div>
-            <div>
-              <FaRegCopyright size="18" />
-            </div>
-            <div> Müəllif hüquqları qorunur 2023</div>
+            <div className="context-info"> Abşeron rayonu, Qobu qəsəbəsi</div>
           </div>
         </div>
       </div>
@@ -61,20 +71,29 @@ const Footer = () => {
         <div className="footer__item--follow-details">
           <div>
             <div>
-              <BiLogoFacebookSquare size="19" />
+              <Image src="/icons/fb.png" alt="phone" width={25} height={25} />
             </div>
-            <div>Facebook</div>
+            <div className="context-info">
+              <Link href="">Facebook</Link>
+            </div>
           </div>
           <div>
             <div>
-              <FaInstagram size="19" />
+              <Image
+                src="/icons/insta.png"
+                alt="phone"
+                width={25}
+                height={25}
+              />
             </div>
-            <div>Instagram</div>
+            <div className="context-info">
+              <Link href="https://www.instagram.com/createindustry.az/">
+                Instagram
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };

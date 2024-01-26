@@ -6,7 +6,6 @@ import { groq } from "next-sanity";
 import { IProduct } from "@/types/ProductTypes";
 import Image from "next/image";
 import { v4 } from "uuid";
-import { Search } from "@/components/Search/Search";
 
 const getAllProductsQueries = `
                   *[_type == "product" && category->name == 'Shoes'] {
@@ -30,8 +29,6 @@ export default async function Products() {
 
   return (
     <div>
-      <Search />
-
       <div className="products">
         <div className="products__shoes">
           {allDatas?.map((item) => {

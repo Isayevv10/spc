@@ -2,13 +2,11 @@ import React from "react";
 import Image from "next/image";
 import "@/styles/pages/_home.scss";
 import Link from "next/link";
-import { Search } from "../Search/Search";
 import Carousel from "../Carousel/Carousel";
 
 const Main = () => {
   return (
     <>
-      <Search />
       <Carousel />
 
       <div className="home">
@@ -49,50 +47,6 @@ const Main = () => {
                   </svg>
                 </Link>
               </div>
-
-              {/* <div className="downloads-protection">
-              <Link href="/muhafize.pdf" download="muhafize">
-                Fərdi mühafizə kataloqu{" "}
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 19"
-                  width={20}
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"
-                  />
-                </svg>
-              </Link>
-            </div> */}
-
-              {/* <div className="downloads-shoes">
-              <Link href="/shoes.pdf" download="shoes">
-                Ayaqqabı kataloqu{" "}
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 19"
-                  width={20}
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"
-                  />
-                </svg>
-              </Link>
-            </div> */}
             </div>
           </div>
           <div className="item-2">
@@ -137,24 +91,67 @@ const Main = () => {
 
         <div className="home__brands">
           <div>
-            <Image src="/images/mfa.png" alt="mfa" width={90} height={40} />
+            <Image
+              src="/images/mfa.png"
+              alt="mfa"
+              width={90}
+              height={40}
+              unoptimized={true}
+            />
           </div>
           <div>
-            <Image src="/images/rti.png" alt="rti" width={90} height={40} />
+            <Image
+              src="/images/rti.png"
+              alt="rti"
+              width={120}
+              height={40}
+              unoptimized={true}
+            />
           </div>
           <div>
             <Image
               src="/images/baymax.png"
               alt="baymax"
-              width={90}
+              width={120}
               height={40}
+              unoptimized={true}
             />
           </div>
           <div>
-            <Image src="/images/iges.jpg" alt="iges" width={90} height={40} />
+            <Image
+              src="/images/iges.png"
+              alt="iges"
+              width={120}
+              height={40}
+              unoptimized={true}
+            />
+          </div>
+          <div style={{ paddingTop: "7px" }}>
+            <Image
+              src="/images/jnm.png"
+              alt="jnm"
+              width={120}
+              height={30}
+              unoptimized={true}
+            />
           </div>
           <div>
-            <Image src="/images/jnm.png" alt="jnm" width={90} height={40} />
+            <Image
+              src="/images/derkim.png"
+              alt="jnm"
+              width={90}
+              height={40}
+              unoptimized={true}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/biagioli.png"
+              alt="jnm"
+              width={135}
+              height={40}
+              unoptimized={true}
+            />
           </div>
         </div>
       </div>

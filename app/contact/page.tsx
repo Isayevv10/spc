@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import "@/styles/pages/_contact.scss";
 import Image from "next/image";
-import { Search } from "@/components/Search/Search";
 
 const Contact = () => {
   const [emailData, setEmailData] = useState({
@@ -60,8 +59,6 @@ const Contact = () => {
 
   return (
     <>
-      <Search />
-
       <div className="contact">
         <div className="contact__mail">
           <div className="grid__form">
@@ -125,26 +122,43 @@ const Contact = () => {
 
         <div className="contact__info">
           <div className="contact__info--adres">
-            <Image src="/images/adres.png" width={70} height={70} alt="adres" />
-            <p>Abşeron rayonu, Qobu qəsəbəsi</p>
+            <Image
+              src="/icons/address.png"
+              width={70}
+              height={70}
+              alt="adres"
+            />
+            <div>
+              <h1>Ünvan</h1>
+              <p>Abşeron rayonu, Qobu qəsəbəsi</p>
+            </div>
           </div>
 
-          <div className="contact__info--detail">
+          <div className="contact__info--contact">
             <Image
-              src="/images/contact.png"
+              src="/icons/contact.png"
               alt="contact"
               width={70}
               height={70}
             />
-
             <div>
               <h1>Telefon</h1>
-              <p>+994 50 265 34 87</p>
+              <p>+994 51 215 20 74</p>
             </div>
+          </div>
 
+          <div className="contact__info--email">
             <div>
-              <h1>Email</h1>
-              <p>sales@createindustry.az</p>
+              <Image
+                src="/icons/email.png"
+                alt="contact"
+                width={70}
+                height={70}
+              />
+              <div>
+                <h1>Email</h1>
+                <p>info@createindustry.az</p>
+              </div>
             </div>
           </div>
         </div>

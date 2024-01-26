@@ -92,8 +92,9 @@ const SearchedProductsList = ({ products }: SearchedProductsListProps) => {
               <Image
                 alt="productPic"
                 src={urlFor(product?.image[0]).url()}
-                width={90}
-                height={90}
+                width={42}
+                height={42}
+                unoptimized={true}
               />
             </div>
             <p className="search__product--name">{product.name}</p>
