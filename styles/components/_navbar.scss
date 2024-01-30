@@ -10,7 +10,7 @@
 
   .sidemenu__navbar {
     z-index: 999;
-    background: #15171c;
+    background: #f00;
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -33,9 +33,9 @@
 
     .sidemenu__links {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 25%;
+      left: 35%;
+      transform: translate(-25%, -25%);
       width: 180px;
       height: 300px;
 
@@ -217,7 +217,6 @@
     .hamburger {
       top: 10%;
       right: -13px;
-      // border: 1px solid;
     }
   }
 }

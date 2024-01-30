@@ -1,12 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import "@/styles/components/_footer.scss";
-import { BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
-import { CiLocationOn } from "react-icons/ci";
-import { FaRegCopyright } from "react-icons/fa6";
-import { BiLogoFacebookSquare } from "react-icons/bi";
-import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
@@ -14,7 +8,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__item--links">
         <p className="footer__item--links-title">Menu</p>
-        <ul className="footer__item--links-design">
+        <ul className="footer__item--links-details">
           <li>
             <Link href="/about">Haqqımızda</Link>
           </li>
@@ -74,7 +68,9 @@ const Footer = () => {
               <Image src="/icons/fb.png" alt="phone" width={25} height={25} />
             </div>
             <div className="context-info">
-              <Link href="">Facebook</Link>
+              <Link href="https://www.facebook.com/photo.php?fbid=122106376790194513&set=pb.61555835408682.-2207520000&type=3">
+                Facebook
+              </Link>
             </div>
           </div>
           <div>
