@@ -33,7 +33,7 @@ const Main = () => {
 
             <div className="downloads">
               <div className="downloads-costume">
-                <Link href="/geyim.pdf" download="geyim">
+                <Link href="/catalog.pdf" download="catalog">
                   Xüsusi geyim kataloqu{" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"

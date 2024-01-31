@@ -52,7 +52,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/images/shoes2.png"
+            src="/images/shoes5.jpeg"
             alt="img2"
             width={0}
             height={0}
@@ -72,7 +72,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/images/shoes4.png"
+            src="/images/shoes6.jpeg"
             alt="img4"
             width={0}
             height={0}

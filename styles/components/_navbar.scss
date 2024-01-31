@@ -16,7 +16,6 @@
     position: fixed;
     right: 0;
     top: 0;
-    // transition: transform 1.3s ease-out;
 
     .closeSidebar {
       color: #fff;
@@ -173,8 +172,6 @@
     }
   }
 }
-
-//  Mobile version
 
 @media screen and (max-width: 1150px) {
   .navbar {
