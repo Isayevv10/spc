@@ -14,7 +14,6 @@ const Navbar = () => {
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
-    console.log(isOpen);
   };
 
   const openDropDown = () => {
@@ -25,6 +24,7 @@ const Navbar = () => {
     <>
       <div className="navbar">
         {/* RES NAV  STARTS*/}
+
         {isOpen ? (
           <div className="sidemenu__navbar">
             <div

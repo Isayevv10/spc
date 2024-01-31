@@ -89,7 +89,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="home__brands">
+        {/* <div className="home__brands">
           <div>
             <Image
               src="/images/mfa.png"
@@ -153,7 +153,7 @@ const Main = () => {
               unoptimized={true}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
