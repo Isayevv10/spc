@@ -45,3 +45,47 @@
     }
   }
 }
+@media screen and (max-width: 992px) {
+  .products {
+    &__shoes {
+      grid-template-columns: repeat(3, 250px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    &__shoes {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    &__shoes {
+      grid-template-columns: repeat(1, 270px);
+      .list {
+        &__desc {
+          margin-bottom: 20px;
+          h5 {
+            font-size: 25px;
+            font-weight: 600;
+            height: 22px;
+          }
+          p:nth-child(2) {
+            margin: 0;
+          }
+
+          p:nth-child(1) {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
