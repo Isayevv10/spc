@@ -62,8 +62,21 @@
       }
     }
   }
+}
 
-  // .slider__container {
-  //   border: 1px solid red;
-  // }
+@media screen and (max-width: 479px) {
+  .container__slider {
+    .swiper {
+      width: 100%;
+      padding: 0;
+    }
+
+    .swiper-slide {
+      &:hover {
+        transform: scale(1);
+        box-shadow: none;
+        transition: none;
+      }
+    }
+  }
 }

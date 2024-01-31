@@ -21,3 +21,28 @@
     padding: 3px;
   }
 }
+
+@media screen and (max-width: 479px) {
+  .main {
+    img {
+      min-width: 240px;
+      min-height: 240px;
+      width: 100% !important;
+      height: 350px !important;
+    }
+  }
+
+  .thumbs {
+    justify-content: space-evenly;
+    margin-top: 10px;
+
+    .eachThumbs {
+      border-radius: 10px;
+
+      img {
+        width: 41px;
+        height: 48px;
+      }
+    }
+  }
+}
