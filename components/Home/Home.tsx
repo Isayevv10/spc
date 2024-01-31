@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
 import "@/styles/pages/_home.scss";
-import Link from "next/link";
+import "swiper/css/free-mode";
+import "swiper/css";
 import Carousel from "../Carousel/Carousel";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Main = () => {
   return (
@@ -89,71 +95,97 @@ const Main = () => {
           </div>
         </div>
 
-        {/* <div className="home__brands">
-          <div>
-            <Image
-              src="/images/mfa.png"
-              alt="mfa"
-              width={90}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/rti.png"
-              alt="rti"
-              width={120}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/baymax.png"
-              alt="baymax"
-              width={120}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/iges.png"
-              alt="iges"
-              width={120}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-          <div style={{ paddingTop: "7px" }}>
-            <Image
-              src="/images/jnm.png"
-              alt="jnm"
-              width={120}
-              height={30}
-              unoptimized={true}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/derkim.png"
-              alt="jnm"
-              width={90}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/biagioli.png"
-              alt="jnm"
-              width={135}
-              height={40}
-              unoptimized={true}
-            />
-          </div>
-        </div> */}
+        <div className="home__brands">
+          <Swiper
+            slidesPerView={5}
+            spaceBetween={30}
+            freeMode={true}
+            loop={true}
+            autoplay={{
+              delay: 1600,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+              },
+            }}
+            modules={[FreeMode, Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Image
+                src="/images/mfa.png"
+                alt="mfa"
+                width={90}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="/images/rti.png"
+                alt="rti"
+                width={120}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="/images/baymax.png"
+                alt="baymax"
+                width={120}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="/images/iges.png"
+                alt="iges"
+                width={120}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide style={{ paddingTop: "7px" }}>
+              <Image
+                src="/images/jnm.png"
+                alt="jnm"
+                width={120}
+                height={30}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="/images/derkim.png"
+                alt="jnm"
+                width={120}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="/images/biagioli.png"
+                alt="jnm"
+                width={140}
+                height={40}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </>
   );
