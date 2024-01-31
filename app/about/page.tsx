@@ -1,9 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import "@/styles/pages/_about.scss";
 import { truncate } from "@/helpers/truncate";
 
 const About = () => {
+  const readMore = () => {
+    let readMoreMobile = document.getElementsByClassName(
+      "readMore--mobile"
+    )[0] as HTMLElement;
+
+    readMoreMobile.style.display = "none";
+
+    let readMoreDesktop = document.getElementsByClassName(
+      "readMore--desktop"
+    )[0] as HTMLElement;
+
+    readMoreDesktop.style.display = "block";
+  };
+
   return (
     <>
       <div className="about">
@@ -41,7 +57,7 @@ const About = () => {
             şəraitdə və sahələrdə çalışan hər bir işçiyə ehtiyac duyduğu
             təhlükəsizliyi, davamlılığı və rahatlığı təklif edir.`)}
               </p>
-              <button>...Read More</button>
+              <button onClick={readMore}>...Read More</button>
             </div>
           </div>
 
