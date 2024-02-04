@@ -113,8 +113,8 @@ const Navbar = () => {
               <Image
                 src="/icons/hamburger.png"
                 alt="navbar"
-                width={32}
-                height={32}
+                width={25}
+                height={25}
               />
             </button>
           )}
