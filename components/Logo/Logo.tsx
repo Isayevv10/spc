@@ -6,7 +6,7 @@ import "@/styles/components/_logo.scss";
 const Logo = () => {
   return (
     <div className="logo">
-      <Link href="/" prefetch={true} >
+      <Link href="/">
         <Image
           alt="createLogo"
           src={"/images/logo.png"}
@@ -14,6 +14,8 @@ const Logo = () => {
           height={0}
           unoptimized={true}
           style={{ width: "127px" }}
+          placeholder="blur"
+          blurDataURL={"/images/logo.png"}
         />
       </Link>
     </div>
