@@ -25,17 +25,6 @@ export const Search = () => {
   const [products, setProducts] = useState<IProduct[] | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const fetchProducts = async () => {
-    setIsLoading(true);
-
-    const products: IProduct[] = await client.fetch(query, {
-      searchText: `*${searchText}*`,
-    });
-
-    setIsLoading(false);
-    setProducts(products);
-  };
-
   useEffect(() => {
     const timeout: number = window.setTimeout(() => {
       if (searchText.trim().length >= 2) {
@@ -47,6 +36,17 @@ export const Search = () => {
 
     return () => clearTimeout(timeout);
   }, [searchText]);
+
+  const fetchProducts = async () => {
+    setIsLoading(true);
+
+    const products: IProduct[] = await client.fetch(query, {
+      searchText: `*${searchText}*`,
+    });
+
+    setIsLoading(false);
+    setProducts(products);
+  };
 
   return (
     <div className="search">
