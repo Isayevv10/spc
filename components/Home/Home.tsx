@@ -28,13 +28,13 @@ const Main = () => {
               vacib amildir. 2019-cu ildən fəaliyyət göstərən Create İndustry
               sizə təqdim etdiyi üstün keyfiyyətli və Avropa standartlarına
               uyğun vasitələrlə əməkdaşlarınızın təhlükəsizliyini təmin etməniz
-              üçün ideal seçim yaradır
+              üçün ideal seçim yaradır.
             </p>
 
             <div className="downloads">
               <div className="downloads-costume">
                 <Link href="/catalog.pdf" download="catalog">
-                  Xüsusi geyim kataloqu{" "}
+                  "Create Industry" məhsul kataloqunu yüklə{" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
                     aria-hidden="true"
@@ -55,6 +55,7 @@ const Main = () => {
               </div>
             </div>
           </div>
+
           <div className="item-2">
             <div className="client">
               <div className="client-item-1">

@@ -3,7 +3,10 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 21px;
+    }
     .swiper-button-next,
     .swiper-button-prev {
       color: red !important;

@@ -14,7 +14,7 @@ type Props = {
 };
 
 const query: string = groq`
-      *[_type == "product" && slug.current == $slug][0] {
+      *[_type == "protectional" && slug.current == $slug][0] {
         name,
         description,
         "image":images,
@@ -23,7 +23,7 @@ const query: string = groq`
   `;
 
 const getRelatedItemsQuery = `
-  *[_type == "product" && category->name == 'Shoes'] {
+  *[_type == "protectional" && category->name == 'PPE'] {
     "mainImage": mainImage.asset->url,
     "slug": slug.current,
     name
@@ -43,16 +43,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
     relatedProducts,
   ])) as unknown as RelatedProdacts[];
 
-  const {
-    brand,
-    size,
-    topMaterial,
-    bottomMaterial,
-    standart,
-    model,
-    protection,
-    sole,
-  } = products?.description;
+  const { size, standart, weight, material } = products?.description;
 
   return (
     <div className="details__container">
@@ -63,24 +54,14 @@ export default async function ProductDetails({ params: { slug } }: Props) {
         <div className="details__info--item-2">
           <div className="details__info--item-2-name">{products?.name}</div>
           <div className="details__info--item-2-desc">
-            {brand ? (
-              <div>
-                <span>Brend: </span>
-                {brand}
+            {weight ? (
+              <div className="weight">
+                <span>Çəki: </span>
+                {weight}
               </div>
             ) : (
               <></>
             )}
-
-            {model ? (
-              <div>
-                <span>Model: </span>
-                {model}
-              </div>
-            ) : (
-              <></>
-            )}
-
             {standart ? (
               <div className="standart">
                 <span>Standart: </span>
@@ -90,46 +71,19 @@ export default async function ProductDetails({ params: { slug } }: Props) {
               <></>
             )}
 
-            {protection ? (
-              <div className="protection">
-                <span>Qorunma Dərəcəsi: </span>
-                {protection}
-              </div>
-            ) : (
-              <></>
-            )}
-
-            {topMaterial ? (
-              <div className="topMaterial">
-                <span>Üst Material: </span>
-                {topMaterial}
-              </div>
-            ) : (
-              <></>
-            )}
-
-            {bottomMaterial ? (
-              <div className="bottomMaterial">
-                <span>Alt Metarial: </span>
-                {bottomMaterial}
-              </div>
-            ) : (
-              <></>
-            )}
-
-            {sole ? (
-              <div className="sole">
-                <span>İçlik: </span>
-                {sole}
-              </div>
-            ) : (
-              <></>
-            )}
-
             {size ? (
               <div className="size">
                 <span>Ölçü: </span>
                 {size}
+              </div>
+            ) : (
+              <></>
+            )}
+
+            {material ? (
+              <div className="material">
+                <span>Material: </span>
+                {material}
               </div>
             ) : (
               <></>

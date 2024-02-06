@@ -9,16 +9,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { v4 } from "uuid";
 import { Navigation } from "swiper/modules";
-import { SpecificProd } from "@/types/ProductTypes";
+import { RelatedProdacts } from "@/types/ProductTypes";
 import { urlFor } from "@/app/lib/sanity";
 
 interface Sirvan {
-  sirvan: SpecificProd;
-  herbi: SpecificProd;
-  jupiter: SpecificProd;
+  relatedItems: RelatedProdacts;
 }
 
-export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
+export default function Slider({ relatedItems }: Sirvan) {
   return (
     <div className="container__slider">
       <Swiper
@@ -41,12 +39,12 @@ export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
         }}
         className="mySwiper"
       >
-        {sirvan?.value.map((item) => {
+        {relatedItems?.value.map((item) => {
           return (
             <div className="slider__container" key={v4()}>
               {item.mainImage ? (
                 <SwiperSlide key={v4()}>
-                  <Link href={`/shoes/${item?.slug}`}>
+                  <Link href={`/shoes/${item?.slug}`} prefetch={true}>
                     <Image
                       key={v4()}
                       src={urlFor(item?.mainImage).url()}
@@ -55,7 +53,6 @@ export default function Slider({ sirvan, herbi, jupiter }: Sirvan) {
                       alt="productPic"
                       unoptimized={true}
                     />
-
                     <div className="card">
                       <div className="card__name">
                         <h4>{item.name}</h4>

@@ -7,6 +7,8 @@ export interface IDescription {
   sole: string;
   protection: string;
   size: string;
+  weight: string;
+  material: string;
 }
 
 export interface IProduct {
@@ -18,7 +20,12 @@ export interface IProduct {
   mainImage: string;
 }
 
-export interface SpecificProd {
+export interface IImages {
+  map(arg0: (item: any, index: number) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>;
+  image: string[];
+}
+
+export interface RelatedProdacts {
   status: string;
   value: [
     {

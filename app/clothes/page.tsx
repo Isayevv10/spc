@@ -7,8 +7,8 @@ import { IProduct } from "@/types/ProductTypes";
 import Image from "next/image";
 import { v4 } from "uuid";
 
-const getAllProductsQueries = `
-                  *[_type == "product" && category->name == 'Shoes'] {
+const getSpecialClothesQueries = `
+                  *[_type == "specialClothes" && category->name == 'SpecialCloth'] {
                     name,
                     "id": _id,
                     description,
@@ -16,14 +16,14 @@ const getAllProductsQueries = `
                     "slug": slug.current,
                   }`;
 
-const getAllProductsItems = () => {
-  return client.fetch(groq`${getAllProductsQueries}`);
+const getSpecialClothesItem = () => {
+  return client.fetch(groq`${getSpecialClothesQueries}`);
 };
 
 export const revalidate = 60;
 
 export default async function Products() {
-  const allDatas: IProduct[] = await getAllProductsItems();
+  const allDatas: IProduct[] = await getSpecialClothesItem();
 
   return (
     <div>
@@ -32,7 +32,7 @@ export default async function Products() {
           {allDatas?.map((item) => {
             return (
               <div className="list" key={v4()}>
-                <Link href={`/shoes/${item?.slug}`}>
+                <Link href={`/clothes/${item?.slug}`}>
                   <div className="list__image">
                     <Image
                       src={urlFor(item?.image[0]).url()}
@@ -45,8 +45,11 @@ export default async function Products() {
                   <div className="list__desc">
                     <h5>{item?.name}</h5>
                     <div>
-                      <p>{item?.description.brand}</p>
-                      <p>{item?.description.standart}...</p>
+                      <p>
+                        {item.description.material.length > 70
+                          ? `${item.description.material.slice(0, 55)}...`
+                          : item.description.material}
+                      </p>
                     </div>
                   </div>
                 </Link>

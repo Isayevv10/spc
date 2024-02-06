@@ -6,11 +6,29 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "@/styles/components/_carousel.scss";
-
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
+import { client, urlFor } from "@/app/lib/sanity";
+import { groq } from "next-sanity";
+import { v4 } from "uuid";
+import { IImages } from "@/types/ProductTypes";
 
-export default function App() {
+const query: string = groq`
+                    *[_type == "carousel"] {
+                        "image": images,
+                        "id": _id,
+                        "slug": slug.current,
+                    }`;
+
+const getCaoruselItems = () => {
+  return client.fetch(groq`${query}`);
+};
+
+export const revalidate = 60;
+
+export default async function Carousel2() {
+  const pics: IImages[] = await getCaoruselItems();
+
   return (
     <div className="container__carousel">
       <Swiper
@@ -30,76 +48,19 @@ export default function App() {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Image
-            src="/images/shoes10.jpg"
-            alt="img1"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes3.png"
-            alt="img4"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes5.jpeg"
-            alt="img2"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes3.png"
-            alt="img4"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes6.jpeg"
-            alt="img4"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes2.png"
-            alt="img2"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/shoes9.jpg"
-            alt="img4"
-            width={0}
-            height={0}
-            sizes="160vw"
-            unoptimized={true}
-          />
-        </SwiperSlide>
+        {pics[0].image.map((item: any, index: number) => {
+          return (
+            <SwiperSlide key={v4()}>
+              <Image
+                src={urlFor(item)!.url()!}
+                alt={"shoes"}
+                width={500}
+                height={500}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

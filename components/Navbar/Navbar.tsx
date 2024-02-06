@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 import "@/styles/components/_navbar.scss";
@@ -11,6 +11,24 @@ import { MdArrowDropDown } from "react-icons/md";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
+  const outsideClick = useRef(null);
+
+  // useEffect(() => {
+  //   // Add event listener to the document object
+  //   document.addEventListener("mousedown", handleClickOutside);
+
+  //   // Remove event listener when the component unmounts
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
+
+  // function handleClickOutside(event) {
+  //   if (outsideClick.current && !outsideClick.current.contains(event.target)) {
+  //     // Clicked outside the side navigation bar, close it
+  //     // Implement your close side navigation bar logic here
+  //   }
+  // }
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
@@ -26,7 +44,7 @@ const Navbar = () => {
         {/* RES NAV  STARTS*/}
 
         {isOpen ? (
-          <div className="sidemenu__navbar">
+          <div className="sidemenu__navbar" ref={outsideClick}>
             <div
               style={{
                 textAlign: "right",
@@ -51,11 +69,11 @@ const Navbar = () => {
                   </Link>
                   {isOpenDropDown ? (
                     <div className="dropdown-content">
-                      <Link href="/shoes">Ayaqqabılar</Link>
-                      <Link href="/">
+                      <Link href="/shoes">Təhlükəsizlik ayaqqabıları</Link>
+                      <Link href="/protectional">
                         Fərdi mühafizə <span className="spann">vasitələri</span>
                       </Link>
-                      <Link href="/">Xüsusi geyimler</Link>
+                      <Link href="/clothes">Xüsusi geyimler</Link>
                     </div>
                   ) : (
                     <></>
@@ -88,11 +106,11 @@ const Navbar = () => {
               <div className="dropdown">
                 <Link href="/">Məhsullar</Link>
                 <div className="dropdown-content">
-                  <Link href="/shoes">Ayaqqabılar</Link>
-                  <Link href="/">
+                  <Link href="/shoes">Təhlükəsizlik ayaqqabıları</Link>
+                  <Link href="/protectional">
                     Fərdi mühafizə <span className="spann">vasitələri</span>
                   </Link>
-                  <Link href="/">Xüsusi geyimler</Link>
+                  <Link href="/clothes">Xüsusi geyimler</Link>
                 </div>
               </div>
             </li>
