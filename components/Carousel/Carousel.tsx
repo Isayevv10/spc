@@ -31,7 +31,6 @@ export default async function Carousel() {
   return (
     <div className="container__carousel">
       <Swiper
-        loop={true}
         centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={30}
@@ -47,7 +46,7 @@ export default async function Carousel() {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        {pics[0].image.map((item: any, index: number) => {
+        {pics[0]?.image?.map((item: any, index: number) => {
           return (
             <SwiperSlide key={v4()}>
               <Image
