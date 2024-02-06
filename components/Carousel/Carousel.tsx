@@ -17,7 +17,6 @@ const query: string = groq`
                     *[_type == "carousel"] {
                         "image": images,
                         "id": _id,
-                        "slug": slug.current,
                     }`;
 
 const getCaoruselItems = () => {

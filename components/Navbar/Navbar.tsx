@@ -13,23 +13,6 @@ const Navbar = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
   const outsideClick = useRef(null);
 
-  // useEffect(() => {
-  //   // Add event listener to the document object
-  //   document.addEventListener("mousedown", handleClickOutside);
-
-  //   // Remove event listener when the component unmounts
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
-
-  // function handleClickOutside(event) {
-  //   if (outsideClick.current && !outsideClick.current.contains(event.target)) {
-  //     // Clicked outside the side navigation bar, close it
-  //     // Implement your close side navigation bar logic here
-  //   }
-  // }
-
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
   };
@@ -106,7 +89,9 @@ const Navbar = () => {
               <div className="dropdown">
                 <Link href="/">Məhsullar</Link>
                 <div className="dropdown-content">
-                  <Link href="/shoes">Təhlükəsizlik ayaqqabıları</Link>
+                  <Link href="/shoes">
+                    Təhlükəsizlik <span className="spann">ayaqqabıları</span>
+                  </Link>
                   <Link href="/protectional">
                     Fərdi mühafizə <span className="spann">vasitələri</span>
                   </Link>

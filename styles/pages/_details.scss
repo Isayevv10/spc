@@ -11,9 +11,9 @@
 
       &-name {
         font-weight: 800;
-        font-size: 31px;
+        font-size: 25px;
         margin-bottom: 23px;
-        color: #333;
+        color: #f00;
       }
       &-desc {
         font-size: 19px;
@@ -44,10 +44,10 @@
     width: fit-content;
     text-align: center;
     margin: auto;
-    font-size: 1.7em;
+    font-size: 25px;
     font-weight: 700;
-    border-bottom: 2px solid rgba($color: #f00, $alpha: 1);
     padding-bottom: 13px;
+    color: #f00;
     letter-spacing: 0.02em;
   }
 }
