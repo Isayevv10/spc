@@ -26,7 +26,7 @@ const getCaoruselItems = () => {
 
 export const revalidate = 60;
 
-export default async function Carousel2() {
+export default async function Carousel() {
   const pics: IImages[] = await getCaoruselItems();
 
   return (
