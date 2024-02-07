@@ -13,7 +13,7 @@ import Link from "next/link";
 const Main = () => {
   return (
     <>
-      <Carousel />
+      {/* <Carousel /> */}
 
       <div className="home">
         <div className="home__content">
