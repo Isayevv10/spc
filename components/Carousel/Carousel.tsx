@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,6 +10,7 @@ import { client, urlFor } from "@/app/lib/sanity";
 import { groq } from "next-sanity";
 import { v4 } from "uuid";
 import { IImages } from "@/types/ProductTypes";
+import CarouselSwiper from "./CarouselSwiper";
 
 const query: string = groq`
                     *[_type == "carousel"] {
@@ -30,36 +29,7 @@ export default async function Carousel() {
 
   return (
     <div className="container__carousel">
-      <Swiper
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        spaceBetween={30}
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 1700,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper"
-      >
-        {pics[0]?.image?.map((item: any, index: number) => {
-          return (
-            <SwiperSlide key={v4()}>
-              <Image
-                src={urlFor(item)!.url()!}
-                alt={"shoes"}
-                width={500}
-                height={500}
-                unoptimized={true}
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <CarouselSwiper pics={pics} />
     </div>
   );
 }
