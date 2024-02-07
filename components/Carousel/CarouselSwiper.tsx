@@ -18,19 +18,36 @@ interface IImagesProps {
 const CarouselSwiper = ({ pics }: IImagesProps) => {
   return (
     <div>
-      {pics[0]?.image?.map((item: any, index: number) => {
-        return (
-          <div key={v4()}>
-            <Image
-              src={urlFor(item)!.url()!}
-              alt={"shoes"}
-              width={500}
-              height={500}
-              unoptimized={true}
-            />
-          </div>
-        );
-      })}
+      <Swiper
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        spaceBetween={30}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 1700,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper"
+      >
+        {pics[0]?.image?.map((item: any, index: number) => {
+          return (
+            <SwiperSlide key={v4()}>
+              <Image
+                src={urlFor(item)!.url()!}
+                alt={"shoes"}
+                width={500}
+                height={500}
+                unoptimized={true}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 };
