@@ -83,7 +83,9 @@ const Navbar = () => {
         <div className="navbar__link">
           <ul className="links">
             <li>
-              <Link href="/" rel="preload">Ana səhifə</Link>
+              <Link rel="preload" href="/" as={""}>
+                Ana səhifə
+              </Link>
             </li>
             <li>
               <div className="dropdown">
