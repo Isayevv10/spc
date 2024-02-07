@@ -20,7 +20,7 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
     <div>
       {pics[0]?.image?.map((item: any, index: number) => {
         return (
-          <SwiperSlide key={v4()}>
+          <div>
             <Image
               src={urlFor(item)!.url()!}
               alt={"shoes"}
@@ -28,7 +28,7 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
               height={500}
               unoptimized={true}
             />
-          </SwiperSlide>
+          </div>
         );
       })}
     </div>
