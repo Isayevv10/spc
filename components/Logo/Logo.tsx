@@ -6,7 +6,7 @@ import "@/styles/components/_logo.scss";
 const Logo = () => {
   return (
     <div className="logo">
-      <Link href="/" rel="preload" as={"document"}>
+      <Link href="/" rel="preload" as={"/"}>
         <Image
           alt="createLogo"
           src={"/images/logo.png"}
