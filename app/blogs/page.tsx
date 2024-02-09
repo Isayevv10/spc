@@ -4,8 +4,8 @@ import "@/styles/pages/_blog.scss";
 import { groq } from "next-sanity";
 import { client, urlFor } from "../lib/sanity";
 import { IBlogs } from "@/types/BlogTypes";
-import { v4 } from "uuid";
 import Link from "next/link";
+import { v4 } from "uuid";
 
 const blogQuery: string = groq`
                         *[_type == "blog"] {
@@ -27,7 +27,7 @@ const Blogs = async () => {
     <div className="blog__container">
       {blogs?.map((blog) => {
         return (
-          <Link href={`/blogs/${blog?.id}`}>
+          <Link href={`/blogs/${blog?.id}`} key={v4()}>
             <div key={v4()} className="blog__container--item">
               <div>
                 <Image
