@@ -1,8 +1,4 @@
 import React from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "@/styles/components/_carousel.scss";
 import { client } from "@/app/lib/sanity";
 import { groq } from "next-sanity";
 import { IImages } from "@/types/ProductTypes";

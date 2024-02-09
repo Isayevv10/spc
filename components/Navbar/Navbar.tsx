@@ -64,6 +64,9 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
+                <Link href="/blogs">Blog</Link>
+              </li>
+              <li>
                 <Link href="/about">Haqqımızda</Link>
               </li>
               <li>
@@ -100,6 +103,9 @@ const Navbar = () => {
                   <Link href="/clothes">Xüsusi geyimler</Link>
                 </div>
               </div>
+            </li>
+            <li>
+              <Link href="/blogs">Blog</Link>
             </li>
             <li>
               <Link href="/about">Haqqımızda</Link>

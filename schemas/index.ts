@@ -1,3 +1,4 @@
+import blogs from "./blogs";
 import carousel from "./carousel";
 import category from "./category";
 import products from "./products";
@@ -10,4 +11,5 @@ export const schemaTypes = [
   specialClothes,
   carousel,
   protectional,
+  blogs,
 ];

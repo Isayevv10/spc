@@ -15,6 +15,7 @@ import { IImages } from "@/types/ProductTypes";
 interface IImagesProps {
   pics: IImages[];
 }
+
 const CarouselSwiper = ({ pics }: IImagesProps) => {
   return (
     <div>
@@ -40,9 +41,10 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
               <Image
                 src={urlFor(item)!.url()!}
                 alt={"shoes"}
-                width={500}
-                height={500}
+                width={0}
+                height={0}
                 unoptimized={true}
+                loading="lazy"
               />
             </SwiperSlide>
           );

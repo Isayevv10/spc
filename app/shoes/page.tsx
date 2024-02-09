@@ -38,6 +38,7 @@ export default async function Products() {
                       src={urlFor(item?.image[0]).url()}
                       width={210}
                       height={210}
+                      objectFit="cover"
                       alt="productPic"
                       unoptimized={true}
                     />
