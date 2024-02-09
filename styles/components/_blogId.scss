@@ -1,0 +1,34 @@
+.container__blog--id {
+  padding: 52px 200px;
+
+  div:nth-child(2) {
+    margin-top: 25px;
+  }
+
+  //   div:nth-child(1) {
+  //     border: 1px solid;
+  //   }
+
+  img {
+    width: 1120px;
+    height: 633px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container__blog--id {
+    padding: 20px;
+    text-align: center;
+
+    img {
+      text-align: center;
+      width: 271px;
+      height: 153px;
+    }
+
+    div:nth-child(2) {
+      text-align: left;
+    }
+  }
+}

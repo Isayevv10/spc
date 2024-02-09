@@ -5,6 +5,11 @@
   column-gap: 60px;
   padding: 52px 200px;
 
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
   &--item {
     div:nth-child(2) {
       margin-top: 12px;

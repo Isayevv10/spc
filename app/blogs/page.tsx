@@ -5,6 +5,7 @@ import { groq } from "next-sanity";
 import { client, urlFor } from "../lib/sanity";
 import { IBlogs } from "@/types/BlogTypes";
 import { v4 } from "uuid";
+import Link from "next/link";
 
 const blogQuery: string = groq`
                         *[_type == "blog"] {
@@ -26,18 +27,20 @@ const Blogs = async () => {
     <div className="blog__container">
       {blogs?.map((blog) => {
         return (
-          <div key={v4()} className="blog__container--item">
-            <div>
-              <Image
-                src={urlFor(blog.image)!.url()!}
-                alt="img"
-                width={0}
-                height={0}
-                sizes="100vw"
-              />
+          <Link href={`/blogs/${blog?.id}`}>
+            <div key={v4()} className="blog__container--item">
+              <div>
+                <Image
+                  src={urlFor(blog.image)!.url()!}
+                  alt="img"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                />
+              </div>
+              <div>{blog?.desc}</div>
             </div>
-            <div>{blog?.desc}</div>
-          </div>
+          </Link>
         );
       })}
     </div>
