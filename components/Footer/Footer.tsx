@@ -88,6 +88,14 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          <div>
+            <div>
+              <Image src="/icons/wp.png" alt="phone" width={22} height={22} />
+            </div>
+            <div className="context-info">
+              <Link href="https://wa.link/ac1mcl">Whatsapp</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

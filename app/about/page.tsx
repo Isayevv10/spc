@@ -63,7 +63,7 @@ const About = () => {
 
           <div className="about__content__item-2">
             <Image
-              src="/images/certificate1.png"
+              src="/images/s1.jpeg"
               alt="c1"
               width={200}
               height={250}
