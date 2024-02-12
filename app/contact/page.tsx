@@ -25,36 +25,54 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      // if (
-      //   emailData.from == "" ||
-      //   emailData.message == "" ||
-      //   emailData.number == "" ||
-      //   emailData.subject == "" ||
-      //   emailData.uname == ""
-      // ) {
-      // }
+      if (emailData.uname == "") {
+        const name: HTMLElement = document.getElementById("ad")!;
+        name.style.display = "block";
+      }
+      if (emailData.from == "") {
+        const email: HTMLElement = document.getElementById("email")!;
+        email.style.display = "block";
+      }
+      if (emailData.number == "") {
+        const phone: HTMLElement = document.getElementById("phone")!;
+        phone.style.display = "block";
+      }
+      if (emailData.subject == "") {
+        const shirket: HTMLElement = document.getElementById("shirket")!;
+        shirket.style.display = "block";
+      }
+      if (emailData.message == "") {
+        const msg: HTMLElement = document.getElementById("msg")!;
+        msg.style.display = "block";
+      }
 
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailData),
-      });
+      if (
+        emailData.from != "" &&
+        emailData.message != "" &&
+        emailData.number != "" &&
+        emailData.subject != "" &&
+        emailData.uname != ""
+      ) {
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(emailData),
+        });
 
-      const data = await response.json();
-      console.log(data);
+        const data = await response.json();
+        setEmailData({
+          from: "",
+          subject: "",
+          message: "",
+          number: "",
+          uname: "",
+        });
+      }
     } catch (error) {
       console.error("Error:", error);
     }
-
-    setEmailData({
-      from: "",
-      subject: "",
-      message: "",
-      number: "",
-      uname: "",
-    });
   };
 
   return (
@@ -68,9 +86,12 @@ const Contact = () => {
                 type="text"
                 name="uname"
                 value={emailData.uname}
-                required
+                required={true}
                 onChange={handleChange}
               />
+              <div id="ad" style={{ display: "none" }}>
+                {"Zəhmət olmasa sahəni doldurun"}
+              </div>
             </div>
             <div className="item-2">
               <label htmlFor="uname">Şirkət</label>
@@ -81,6 +102,9 @@ const Contact = () => {
                 required
                 onChange={handleChange}
               />
+              <div id="shirket" style={{ display: "none" }}>
+                {"Zəhmət olmasa sahəni doldurun"}
+              </div>
             </div>
             <div className="item-3">
               <label htmlFor="uname">Email</label>
@@ -91,6 +115,9 @@ const Contact = () => {
                 required
                 onChange={handleChange}
               />
+              <div id="email" style={{ display: "none" }}>
+                {"Zəhmət olmasa sahəni doldurun"}
+              </div>
             </div>
             <div className="item-4">
               <label htmlFor="uname">Telefon</label>
@@ -101,6 +128,9 @@ const Contact = () => {
                 required
                 onChange={handleChange}
               />
+              <div id="phone" style={{ display: "none" }}>
+                {"Zəhmət olmasa sahəni doldurun"}
+              </div>
             </div>
             <div className="item-5">
               <label htmlFor="uname">Mesajınız</label>
@@ -112,6 +142,9 @@ const Contact = () => {
                 required
                 onChange={handleChange}
               />
+              <div id="msg" style={{ display: "none" }}>
+                {"Zəhmət olmasa sahəni doldurun"}
+              </div>
             </div>
           </div>
 

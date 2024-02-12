@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
           <div>
             <div>
-              <Image src="/icons/wp.png" alt="phone" width={22} height={22} />
+              <Image src="/icons/wp.png" alt="phone" width={25} height={25} />
             </div>
             <div className="context-info">
               <Link href="https://wa.link/ac1mcl">Whatsapp</Link>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 import "@/styles/components/_navbar.scss";
@@ -12,6 +12,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
   const outsideClick = useRef(null);
+
+  const handleClose = (e: { target: Node }) => {
+    let sidemenu__navbar: HTMLElement = document.querySelector(".app")!;
+    if (!sidemenu__navbar.contains(e.target)) {
+      setIsOpen((prev: boolean) => !prev);
+    }
+    console.log(e.target);
+  };
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
@@ -27,7 +35,11 @@ const Navbar = () => {
         {/* RES NAV  STARTS*/}
 
         {isOpen ? (
-          <div className="sidemenu__navbar" ref={outsideClick}>
+          <div
+            className="sidemenu__navbar"
+            ref={outsideClick}
+            onClick={() => handleClose}
+          >
             <div
               style={{
                 textAlign: "right",

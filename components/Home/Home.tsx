@@ -34,23 +34,15 @@ const Main = () => {
             <div className="downloads">
               <div className="downloads-costume">
                 <Link href="/catalog.pdf" download="catalog">
-                  {`"Create Industry" məhsul kataloqunu yüklə`}{" "}
-                  <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 19"
-                    width={20}
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"
+                  <span>{`"Create Industry" məhsul kataloqunu yüklə`}</span>{" "}
+                  <span>
+                    <Image
+                      src={"/icons/download.png"}
+                      alt="download"
+                      width={22}
+                      height={22}
                     />
-                  </svg>
+                  </span>
                 </Link>
               </div>
             </div>
@@ -59,17 +51,17 @@ const Main = () => {
           <div className="item-2">
             <div className="client">
               <div className="client-item-1">
-                <Image src="/icons/client.svg" alt="" width={66} height={66} />
+                <Image src="/icons/client.png" alt="" width={62} height={62} />
               </div>
               <div className="client-item-2">
-                <p>Müştəri yönümlülük</p>
+                <p>Müştəri məmnuniyyəti</p>
                 <p>Şirkətin əsas hədəflərindən biri müştəri məmnuniyyətidir.</p>
               </div>
             </div>
 
             <div className="worker">
               <div className="worker-item-1">
-                <Image src="/icons/worker.svg" alt="" width={66} height={66} />
+                <Image src="/icons/worker.png" alt="" width={62} height={62} />
               </div>
               <div className="worker-item-2">
                 <p>Təcrübəli və peşəkar kadrlar</p>
@@ -83,7 +75,7 @@ const Main = () => {
 
             <div className="depo">
               <div className="depo-item-1">
-                <Image src="/icons/depo.svg" alt="" width={66} height={66} />
+                <Image src="/icons/depo.png" alt="" width={62} height={62} />
               </div>
               <div className="depo-item-2">
                 <p>Anbarlama</p>
