@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Children, ReactChild, ReactChildren } from "react";
 import "@/styles/pages/_home.scss";
 import "swiper/css/free-mode";
 import "swiper/css";
@@ -10,10 +10,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Main = () => {
+const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Carousel />
+      {children}
 
       <div className="home">
         <div className="home__content">

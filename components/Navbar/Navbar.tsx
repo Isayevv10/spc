@@ -11,14 +11,16 @@ import { MdArrowDropDown } from "react-icons/md";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
-  const outsideClick = useRef(null);
 
-  const handleClose = (e: { target: Node }) => {
-    let sidemenu__navbar: HTMLElement = document.querySelector(".app")!;
-    if (!sidemenu__navbar.contains(e.target)) {
-      setIsOpen((prev: boolean) => !prev);
+  let sidemenu__navbar: HTMLElement =
+    document.querySelector(".sidemenu__navbar")!;
+
+  document.onclick = function (e) {
+    const target = e.target as Element;
+
+    if (!target.classList.contains("sidemenu__navbar")) {
+      sidemenu__navbar?.classList.add("hidden");
     }
-    console.log(e.target);
   };
 
   const openSideMenu = () => {
@@ -35,11 +37,7 @@ const Navbar = () => {
         {/* RES NAV  STARTS*/}
 
         {isOpen ? (
-          <div
-            className="sidemenu__navbar"
-            ref={outsideClick}
-            onClick={() => handleClose}
-          >
+          <div className="sidemenu__navbar">
             <div
               style={{
                 textAlign: "right",

@@ -10,6 +10,10 @@
   background-size: cover;
   position: relative;
 
+  .hidden {
+    display: none;
+  }
+
   .sidemenu__navbar {
     z-index: 999;
     width: 250px;
