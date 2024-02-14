@@ -41,10 +41,10 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
               <Image
                 src={urlFor(item)!.url()!}
                 alt={"shoes"}
-                width={0}
-                height={0}
                 unoptimized={true}
                 loading="lazy"
+                width={1796}
+                height={632}
               />
             </SwiperSlide>
           );
