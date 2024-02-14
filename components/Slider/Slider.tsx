@@ -11,12 +11,16 @@ import { v4 } from "uuid";
 import { Navigation } from "swiper/modules";
 import { RelatedProdacts } from "@/types/ProductTypes";
 import { urlFor } from "@/app/lib/sanity";
+import { useParams, usePathname } from "next/navigation";
 
 interface Sirvan {
   relatedItems: RelatedProdacts;
 }
 
 export default function Slider({ relatedItems }: Sirvan) {
+  const params = usePathname();
+  const urlsArray = params.split("/");
+
   return (
     <div className="container__slider">
       <Swiper
@@ -44,7 +48,10 @@ export default function Slider({ relatedItems }: Sirvan) {
             <div className="slider__container" key={v4()}>
               {item.mainImage ? (
                 <SwiperSlide key={v4()}>
-                  <Link href={`/shoes/${item?.slug}`} prefetch={true}>
+                  <Link
+                    href={`/${urlsArray.at(1)}/${item?.slug}`}
+                    prefetch={true}
+                  >
                     <Image
                       key={v4()}
                       src={urlFor(item?.mainImage).url()}
