@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 import "@/styles/components/_navbar.scss";
@@ -12,16 +12,37 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
 
-  let sidemenu__navbar: HTMLElement =
-    document.querySelector(".sidemenu__navbar")!;
+  const outsideRef = useRef(null);
+  const refValue = outsideRef?.current as unknown as Element;
 
-  document.onclick = function (e) {
-    const target = e.target as Element;
+  // useEffect(() => {
+  //   function handleClickOutside(e: MouseEvent) {
+  //     const target = e.target as Element;
 
-    if (!target.classList.contains("sidemenu__navbar")) {
-      sidemenu__navbar?.classList.add("hidden");
-    }
-  };
+  //     if (!refValue?.classList.contains(target.className)) {
+  //       console.log(target);
+  //       setIsOpen((prev) => prev == false);
+  //     }
+  //   }
+  //   document.addEventListener("click", handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, [outsideRef]);
+
+  // useEffect(() => {
+  //   // let sidemenu__navbar: HTMLElement =
+  //   //   document.querySelector(".sidemenu__navbar")!;
+
+  //   document.onclick = function (e) {
+  //     const target = e.target as Element;
+
+  //     if (target.classList.contains("sidemenu__navbar")) {
+  //       setIsOpen((prev) => !prev);
+  //     }
+  //   };
+  // });
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
@@ -37,7 +58,7 @@ const Navbar = () => {
         {/* RES NAV  STARTS*/}
 
         {isOpen ? (
-          <div className="sidemenu__navbar">
+          <div className="sidemenu__navbar" ref={outsideRef}>
             <div
               style={{
                 textAlign: "right",

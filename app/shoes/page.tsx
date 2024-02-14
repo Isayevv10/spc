@@ -36,9 +36,9 @@ export default async function Products() {
                   <div className="list__image">
                     <Image
                       src={urlFor(item?.image[0]).url()}
-                      width={230}
-                      height={130}
-                      objectFit="contain"
+                      width={0}
+                      height={141}
+                      objectFit="cover"
                       alt="productPic"
                       unoptimized={true}
                     />

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Children, ReactChild, ReactChildren } from "react";
+import React from "react";
 import "@/styles/pages/_home.scss";
 import "swiper/css/free-mode";
 import "swiper/css";
