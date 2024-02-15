@@ -12,16 +12,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
 
-  const outsideRef = useRef(null);
-  const refValue = outsideRef?.current as unknown as Element;
+  const outsideRef = useRef<HTMLDivElement>(null);
 
   // useEffect(() => {
-  //   function handleClickOutside(e: MouseEvent) {
-  //     const target = e.target as Element;
-
-  //     if (!refValue?.classList.contains(target.className)) {
-  //       console.log(target);
-  //       setIsOpen((prev) => prev == false);
+  //   function handleClickOutside(e: { target: Node | null }) {
+  //     if (!outsideRef.current?.contains(e.target)) {
+  //       setIsOpen(false);
+  //       console.log(outsideRef.current);
   //     }
   //   }
   //   document.addEventListener("click", handleClickOutside);
@@ -29,20 +26,7 @@ const Navbar = () => {
   //   return () => {
   //     document.removeEventListener("click", handleClickOutside);
   //   };
-  // }, [outsideRef]);
-
-  // useEffect(() => {
-  //   // let sidemenu__navbar: HTMLElement =
-  //   //   document.querySelector(".sidemenu__navbar")!;
-
-  //   document.onclick = function (e) {
-  //     const target = e.target as Element;
-
-  //     if (target.classList.contains("sidemenu__navbar")) {
-  //       setIsOpen((prev) => !prev);
-  //     }
-  //   };
-  // });
+  // }, []);
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
