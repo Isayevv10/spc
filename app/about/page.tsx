@@ -57,7 +57,7 @@ const About = () => {
             şəraitdə və sahələrdə çalışan hər bir işçiyə ehtiyac duyduğu
             təhlükəsizliyi, davamlılığı və rahatlığı təklif edir.`)}
               </p>
-              <button onClick={readMore}>...Read More</button>
+              <button onClick={readMore}>...Davamını oxu</button>
             </div>
           </div>
 

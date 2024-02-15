@@ -83,7 +83,10 @@ const Navbar = () => {
                   </Link>
                   {isOpenDropDown ? (
                     <div className="dropdown-content">
-                      <Link href="/shoes">Təhlükəsizlik ayaqqabıları</Link>
+                      <Link href="/shoes">
+                        Təhlükəsizlik{" "}
+                        <span className="spann">ayaqqabıları</span>
+                      </Link>
                       <Link href="/protectional">
                         Fərdi mühafizə <span className="spann">vasitələri</span>
                       </Link>
