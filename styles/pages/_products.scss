@@ -1,6 +1,6 @@
 .products {
   padding: 50px;
-  background-color: #dad6d1;
+  background-color: #fff;
 
   &__shoes {
     display: grid;
@@ -9,7 +9,7 @@
     font-weight: 700;
 
     .list {
-      border: 1px solid #fff;
+      border: 1px solid #e1e1e1;
 
       &:hover {
         transform: scale(1.06);
