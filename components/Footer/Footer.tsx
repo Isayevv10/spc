@@ -65,12 +65,10 @@ const Footer = () => {
         <div className="footer__item--follow-details">
           <div>
             <div>
-              <Image src="/icons/fb.png" alt="phone" width={25} height={25} />
+              <Image src="/icons/wp.png" alt="phone" width={25} height={25} />
             </div>
             <div className="context-info">
-              <Link href="https://www.facebook.com/photo.php?fbid=122106376790194513&set=pb.61555835408682.-2207520000&type=3">
-                Facebook
-              </Link>
+              <Link href="https://wa.link/ac1mcl">Whatsapp</Link>
             </div>
           </div>
           <div>
@@ -90,10 +88,12 @@ const Footer = () => {
           </div>
           <div>
             <div>
-              <Image src="/icons/wp.png" alt="phone" width={25} height={25} />
+              <Image src="/icons/fb.png" alt="phone" width={25} height={25} />
             </div>
             <div className="context-info">
-              <Link href="https://wa.link/ac1mcl">Whatsapp</Link>
+              <Link href="https://www.facebook.com/photo.php?fbid=122106376790194513&set=pb.61555835408682.-2207520000&type=3">
+                Facebook
+              </Link>
             </div>
           </div>
         </div>
