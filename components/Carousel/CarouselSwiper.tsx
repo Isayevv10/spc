@@ -28,7 +28,7 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
           clickable: true,
         }}
         autoplay={{
-          delay: 1700,
+          delay: 2100,
           disableOnInteraction: false,
         }}
         navigation={true}
