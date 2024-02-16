@@ -15,8 +15,12 @@ const Navbar = () => {
   const outsideRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
+    function handleClickOutside(e: Event) {
+      const target = e?.target as Element;
       if (!outsideRef.current?.contains(e.target as Element)) {
+        setIsOpen(false);
+      }
+      if (target?.className === "navlink") {
         setIsOpen(false);
       }
     }
@@ -53,7 +57,9 @@ const Navbar = () => {
             </div>
             <ul className="sidemenu__links">
               <li>
-                <Link href="/">Ana səhifə</Link>
+                <Link href="/" className="navlink">
+                  Ana səhifə
+                </Link>
               </li>
               <li>
                 <div className="dropdown" onClick={openDropDown}>
@@ -66,14 +72,16 @@ const Navbar = () => {
                   </Link>
                   {isOpenDropDown ? (
                     <div className="dropdown-content">
-                      <Link href="/shoes">
+                      <Link href="/shoes" className="navlink">
                         Təhlükəsizlik{" "}
                         <span className="spann">ayaqqabıları</span>
                       </Link>
-                      <Link href="/protectional">
+                      <Link href="/protectional" className="navlink">
                         Fərdi mühafizə <span className="spann">vasitələri</span>
                       </Link>
-                      <Link href="/clothes">Xüsusi geyimler</Link>
+                      <Link href="/clothes" className="navlink">
+                        Xüsusi geyimler
+                      </Link>
                     </div>
                   ) : (
                     <></>
@@ -81,13 +89,19 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <Link href="/blogs">Bloq</Link>
+                <Link href="/blogs" className="navlink">
+                  Bloq
+                </Link>
               </li>
               <li>
-                <Link href="/about">Haqqımızda</Link>
+                <Link href="/about" className="navlink">
+                  Haqqımızda
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Əlaqə</Link>
+                <Link href="/contact" className="navlink">
+                  Əlaqə
+                </Link>
               </li>
             </ul>
           </div>
