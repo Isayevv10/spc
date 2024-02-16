@@ -17,7 +17,6 @@ const Navbar = () => {
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (!outsideRef.current?.contains(e.target as Element)) {
-        console.log(e.target);
         setIsOpen(false);
       }
     }
