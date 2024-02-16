@@ -14,19 +14,19 @@ const Navbar = () => {
 
   const outsideRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   function handleClickOutside(e: MouseEvent) {
-  //     if (!outsideRef.current?.contains(e.target as Element)) {
-  //       setIsOpen(false);
-  //       console.log(outsideRef.current);
-  //     }
-  //   }
-  //   document.addEventListener("click", handleClickOutside);
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (!outsideRef.current?.contains(e.target as Element)) {
+        console.log(e.target);
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("click", handleClickOutside);
 
-  //   return () => {
-  //     document.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  });
 
   const openSideMenu = () => {
     setIsOpen((prev: boolean) => !prev);
