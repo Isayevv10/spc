@@ -42,7 +42,6 @@ export default async function ProductDetails({ params: { slug } }: Props) {
   const [related] = (await Promise.allSettled([
     relatedProducts,
   ])) as unknown as RelatedProdacts[];
-  console.log(products);
 
   const description: IDescription = products?.description;
   const { standart, size, weight, material } = description;
