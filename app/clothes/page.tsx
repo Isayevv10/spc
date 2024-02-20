@@ -46,8 +46,8 @@ export default async function Products() {
                     <h5>{item?.name}</h5>
                     <div>
                       <p>
-                        {item?.description?.material.length > 70
-                          ? `${item.description?.material.slice(0, 55)}...`
+                        {item?.description?.material?.length > 70
+                          ? `${item.description?.material?.slice(0, 55)}...`
                           : item.description?.material}
                       </p>
                     </div>

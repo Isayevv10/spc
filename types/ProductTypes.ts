@@ -20,11 +20,6 @@ export interface IProduct {
   mainImage: string;
 }
 
-export interface IImages {
-  map(arg0: (item: any, index: number) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>;
-  image: string[];
-}
-
 export interface RelatedProdacts {
   status: string;
   value: [

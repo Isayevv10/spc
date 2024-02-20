@@ -1,5 +1,5 @@
 import { client } from "@/app/lib/sanity";
-import { IProduct, RelatedProdacts } from "@/types/ProductTypes";
+import { IDescription, IProduct, RelatedProdacts } from "@/types/ProductTypes";
 import { groq } from "next-sanity";
 import React from "react";
 import "@/styles/pages/_details.scss";
@@ -42,8 +42,10 @@ export default async function ProductDetails({ params: { slug } }: Props) {
   const [related] = (await Promise.allSettled([
     relatedProducts,
   ])) as unknown as RelatedProdacts[];
+  console.log(products);
 
-  const { size, standart, weight, material } = products?.description;
+  const description: IDescription = products?.description;
+  const { standart, size, weight, material } = description;
 
   return (
     <div className="details__container">
