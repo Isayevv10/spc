@@ -17,9 +17,10 @@ const Navbar = () => {
   useEffect(() => {
     function handleClickOutside(e: Event) {
       const target = e?.target as Element;
-      if (!outsideRef.current?.contains(e.target as Element)) {
+      if (!outsideRef.current?.contains(target as Element)) {
         setIsOpen(false);
       }
+
       if (target?.className === "navlink") {
         setIsOpen(false);
       }
