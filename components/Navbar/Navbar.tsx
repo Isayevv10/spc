@@ -22,6 +22,7 @@ const Navbar = () => {
       }
 
       if (target?.className === "navlink") {
+        setIsOpenDropDown(false);
         setIsOpen(false);
       }
     }
