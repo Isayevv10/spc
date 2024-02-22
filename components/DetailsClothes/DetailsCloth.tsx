@@ -26,8 +26,8 @@ const Details = ({ products }: IProductProps) => {
               height={0}
               unoptimized={true}
               style={{
-                height: "480px",
-                width: "850px",
+                height: "500px",
+                width: "100%",
                 objectFit: "contain",
               }}
             />
@@ -48,8 +48,8 @@ const Details = ({ products }: IProductProps) => {
               <Image
                 src={urlFor(products?.image[index]).url()}
                 alt={"shoes"}
-                width={100}
-                height={64}
+                width={95}
+                height={75}
                 unoptimized={true}
               />
             </div>

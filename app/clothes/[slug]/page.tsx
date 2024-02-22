@@ -6,6 +6,7 @@ import "@/styles/pages/_details.scss";
 import "@/styles/components/_details.scss";
 import Details from "@/components/DetailsPage/Details";
 import Slider from "@/components/Slider/Slider";
+import DetailsCloth from "@/components/DetailsClothes/DetailsCloth";
 
 type Props = {
   params: {
@@ -50,7 +51,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
     <div className="details__container">
       <div className="details__info">
         <div className="details__info--item-1">
-          <Details products={products} />
+          <DetailsCloth products={products} />
         </div>
         <div className="details__info--item-2">
           <div className="details__info--item-2-name">{products?.name}</div>

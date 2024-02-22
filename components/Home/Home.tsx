@@ -4,7 +4,6 @@ import React from "react";
 import "@/styles/pages/_home.scss";
 import "swiper/css/free-mode";
 import "swiper/css";
-import Carousel from "../Carousel/Carousel";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
