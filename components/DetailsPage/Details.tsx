@@ -28,7 +28,7 @@ const Details = ({ products }: IProductProps) => {
       const target = e?.target as Element;
       if (!outsideRef.current?.contains(target as Element)) {
         popupImage.style.display = "none";
-        document.body.style.overflow = "scroll";
+        document.body.style.overflow = "visible";
       }
     }
     document.addEventListener("click", handleClickOutside);

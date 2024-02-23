@@ -11,7 +11,7 @@ import { v4 } from "uuid";
 import { Navigation } from "swiper/modules";
 import { RelatedProdacts } from "@/types/ProductTypes";
 import { urlFor } from "@/app/lib/sanity";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface Sirvan {
   relatedItems: RelatedProdacts;
