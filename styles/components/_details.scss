@@ -10,6 +10,27 @@
   }
 }
 
+#popup-image {
+  border: 1px solid;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.85); /* Black w/ opacity */
+
+  img {
+    border: 1px solid #f00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .thumbs {
   display: flex;
   justify-content: space-around;
