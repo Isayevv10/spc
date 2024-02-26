@@ -21,7 +21,7 @@ const Navbar = () => {
         setIsOpen(false);
       }
 
-      if (target?.className === "navlink") {
+      if (target.className === "navlink") {
         setIsOpenDropDown(false);
         setIsOpen(false);
       }
@@ -65,7 +65,7 @@ const Navbar = () => {
               </li>
               <li>
                 <div className="dropdown" onClick={openDropDown}>
-                  <Link href="#">
+                  <Link href="#" className="navlink">
                     Məhsullar
                     <span>
                       {" "}
