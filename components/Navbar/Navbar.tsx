@@ -22,8 +22,15 @@ const Navbar = () => {
       }
 
       if (target.className === "navlink") {
+        e.stopPropagation();
         setIsOpenDropDown(false);
         setIsOpen(false);
+        console.log(target);
+      }
+      console.log(isOpen);
+
+      if (isOpenDropDown) {
+        setIsOpen(true);
       }
     }
     document.addEventListener("click", handleClickOutside);
