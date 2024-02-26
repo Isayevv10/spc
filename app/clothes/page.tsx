@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/pages/_products.scss";
+import "@/styles/pages/_productsClothes.scss";
 import Link from "next/link";
 import { client, urlFor } from "../lib/sanity";
 import { groq } from "next-sanity";
@@ -28,7 +28,7 @@ export default async function Products() {
   return (
     <div>
       <div className="products">
-        <div className="products__shoes">
+        <div className="products__cloth">
           {allDatas?.map((item) => {
             return (
               <div className="list" key={v4()}>
@@ -36,10 +36,11 @@ export default async function Products() {
                   <div className="list__image">
                     <Image
                       src={urlFor(item?.image[0]).url()}
-                      width={210}
-                      height={210}
+                      width={0}
+                      height={194}
                       alt="productPic"
                       unoptimized={true}
+                      objectFit="cover"
                     />
                   </div>
                   <div className="list__desc">
