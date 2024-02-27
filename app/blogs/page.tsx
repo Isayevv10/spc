@@ -15,11 +15,14 @@ const blogQuery: string = groq`
                       }`;
 
 const getBlogsItems = () => {
-  return client.fetch(groq`${blogQuery}`, { next: { revalidate: 60 } });
+  return client.fetch(groq`${blogQuery}`);
 };
+
+export const revalidate = 60;
 
 const Blogs = async () => {
   const blogs: IBlogs[] = await getBlogsItems();
+  console.log(blogs);
 
   return (
     <div className="blog__container">
