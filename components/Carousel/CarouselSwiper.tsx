@@ -28,14 +28,14 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
           clickable: true,
         }}
         autoplay={{
-          delay: 5000,
+          delay: 3900,
           disableOnInteraction: false,
         }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        {pics[0]?.image?.map((item: any, index: number) => {
+        {pics[0]?.images?.map((item: any, index: number) => {
           return (
             <SwiperSlide key={v4()}>
               <Image

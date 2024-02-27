@@ -4,7 +4,7 @@ export default {
   title: "Carousel",
   fields: [
     {
-      name: "Carousel",
+      name: "carousel",
       title: "Carousel",
       type: "string",
       description: "Name of Carousel",

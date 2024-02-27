@@ -6,14 +6,20 @@ import CarouselSwiper from "./CarouselSwiper";
 
 const query: string = groq`
                     *[_type == "carousel"] {
-                        "image":images,
+                        "images":images,
                     }`;
 
 const getCaoruselItems = () => {
-  return client.fetch(groq`${query}`);
+  return client.fetch(
+    groq`${query}`,
+    {},
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  );
 };
-
-export const revalidate = 10;
 
 export default async function Carousel() {
   const pics: IImages[] = await getCaoruselItems();

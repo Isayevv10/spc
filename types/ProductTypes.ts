@@ -21,7 +21,7 @@ export interface IProduct {
 }
 
 export interface IImages {
-  image: string[];
+  images: string[];
 }
 
 export interface RelatedProdacts {
