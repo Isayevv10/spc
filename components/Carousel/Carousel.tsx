@@ -6,11 +6,11 @@ import CarouselSwiper from "./CarouselSwiper";
 
 const query: string = groq`
                     *[_type == "carousel"] {
-                        "image": images,
+                        "image":images,
                     }`;
 
 const getCaoruselItems = () => {
-  return client.fetch(groq`${query}`, { cache: "force-cache" });
+  return client.fetch(groq`${query}`);
 };
 
 export const revalidate = 60;
