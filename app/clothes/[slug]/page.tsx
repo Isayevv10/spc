@@ -4,7 +4,6 @@ import { groq } from "next-sanity";
 import React from "react";
 import "@/styles/pages/_details.scss";
 import "@/styles/components/_details.scss";
-import Details from "@/components/DetailsPage/Details";
 import Slider from "@/components/Slider/Slider";
 import DetailsCloth from "@/components/DetailsClothes/DetailsCloth";
 

@@ -25,12 +25,10 @@ const Navbar = () => {
         e.stopPropagation();
         setIsOpenDropDown(false);
         setIsOpen(false);
-        console.log(target);
       }
-      console.log(isOpen);
 
       if (isOpenDropDown) {
-        setIsOpen(true);
+        setIsOpen(true);2
       }
     }
     document.addEventListener("click", handleClickOutside);
