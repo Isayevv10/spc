@@ -14,6 +14,9 @@ export default {
       title: "Image",
       type: "array",
       of: [{ type: "image" }],
+      options: {
+        hotspot: true,
+      },
     },
   ],
 };
