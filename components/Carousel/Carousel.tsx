@@ -10,8 +10,10 @@ const query: string = groq`
                     }`;
 
 const getCaoruselItems = () => {
-  return client.fetch(groq`${query}`, { next: { revalidate: 60 } });
+  return client.fetch(groq`${query}`, { cache: "force-cache" });
 };
+
+export const revalidate = 60;
 
 export default async function Carousel() {
   const pics: IImages[] = await getCaoruselItems();
