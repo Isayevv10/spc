@@ -51,6 +51,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
     model,
     protection,
     sole,
+    desc,
   } = products?.description;
 
   return (
@@ -129,6 +130,15 @@ export default async function ProductDetails({ params: { slug } }: Props) {
               <div className="size">
                 <span>Ölçü: </span>
                 {size}
+              </div>
+            ) : (
+              <></>
+            )}
+
+            {desc ? (
+              <div className="desc">
+                <span>Təsviri: </span>
+                {desc}
               </div>
             ) : (
               <></>

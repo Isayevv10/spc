@@ -44,7 +44,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
   ])) as unknown as RelatedProdacts[];
 
   const description: IDescription = products?.description;
-  const { standart, size, weight, material } = description;
+  const { standart, size, weight, material, desc } = description;
 
   return (
     <div className="details__container">
@@ -85,6 +85,15 @@ export default async function ProductDetails({ params: { slug } }: Props) {
               <div className="material">
                 <span>Material: </span>
                 {material}
+              </div>
+            ) : (
+              <></>
+            )}
+
+            {desc ? (
+              <div className="desc">
+                <span>Təsviri: </span>
+                {desc}
               </div>
             ) : (
               <></>

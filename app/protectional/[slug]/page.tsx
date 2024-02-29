@@ -18,7 +18,7 @@ const query: string = groq`
         name,
         description,
         "image":images,
-        "id": _id
+        "id": _idç
       }
   `;
 
@@ -43,7 +43,7 @@ export default async function ProductDetails({ params: { slug } }: Props) {
     relatedProducts,
   ])) as unknown as RelatedProdacts[];
 
-  const { size, standart, weight, material } = products?.description;
+  const { size, standart, weight, material, desc } = products?.description;
 
   return (
     <div className="details__container">
@@ -84,6 +84,15 @@ export default async function ProductDetails({ params: { slug } }: Props) {
               <div className="material">
                 <span>Material: </span>
                 {material}
+              </div>
+            ) : (
+              <></>
+            )}
+
+            {desc ? (
+              <div className="desc">
+                <span>Təsviri: </span>
+                {desc}
               </div>
             ) : (
               <></>

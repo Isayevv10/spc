@@ -13,22 +13,20 @@ const Navbar = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
 
   const outsideRef = useRef<HTMLDivElement>(null);
+  const dropDown = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(e: Event) {
       const target = e?.target as Element;
+
+      console.log(target);
+
       if (!outsideRef.current?.contains(target as Element)) {
         setIsOpen(false);
       }
 
-      if (target.className === "navlink") {
-        e.stopPropagation();
-        setIsOpenDropDown(false);
+      if (target.className == "navlink") {
         setIsOpen(false);
-      }
-
-      if (isOpenDropDown) {
-        setIsOpen(true);2
       }
     }
     document.addEventListener("click", handleClickOutside);
@@ -70,12 +68,11 @@ const Navbar = () => {
               </li>
               <li>
                 <div className="dropdown" onClick={openDropDown}>
-                  <Link href="#" className="navlink">
+                  <Link href="#">
                     Məhsullar
                     <span>
-                      {" "}
                       <MdArrowDropDown style={{ margin: "0" }} size={20} />{" "}
-                    </span>{" "}
+                    </span>
                   </Link>
                   {isOpenDropDown ? (
                     <div className="dropdown-content">

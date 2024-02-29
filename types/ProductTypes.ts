@@ -9,6 +9,7 @@ export interface IDescription {
   size: string;
   weight: string;
   material: string;
+  desc: string;
 }
 
 export interface IProduct {

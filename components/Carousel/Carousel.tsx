@@ -24,8 +24,6 @@ const getCaoruselItems = () => {
 export default async function Carousel() {
   const pics: IImages[] = await getCaoruselItems();
 
-  console.log(pics);
-
   return (
     <div className="container__carousel">
       <CarouselSwiper pics={pics} />

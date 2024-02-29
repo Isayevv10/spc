@@ -77,6 +77,11 @@ export default {
           title: "Ölçü",
           type: "string",
         },
+        {
+          name: "desc",
+          title: "Təsviri",
+          type: "string",
+        },
       ],
     },
     {
