@@ -19,8 +19,6 @@ const Navbar = () => {
     function handleClickOutside(e: Event) {
       const target = e?.target as Element;
 
-      console.log(target);
-
       if (!outsideRef.current?.contains(target as Element)) {
         setIsOpen(false);
       }
