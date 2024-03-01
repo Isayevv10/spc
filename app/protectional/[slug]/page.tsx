@@ -18,7 +18,7 @@ const query: string = groq`
         name,
         description,
         "image":images,
-        "id": _idç
+        "id": _id
       }
   `;
 
