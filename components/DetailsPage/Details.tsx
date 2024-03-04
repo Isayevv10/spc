@@ -67,11 +67,6 @@ const Details = ({ products }: IProductProps) => {
           width={300}
           height={0}
           unoptimized={true}
-          style={{
-            height: "480px",
-            width: "700px",
-            objectFit: "contain",
-          }}
         />
       </div>
 

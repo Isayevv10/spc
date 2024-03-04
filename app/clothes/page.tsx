@@ -45,13 +45,13 @@ export default async function Products() {
                   </div>
                   <div className="list__desc">
                     <h5>{item?.name}</h5>
-                    <div>
+                    {/* <div>
                       <p>
                         {item?.description?.material?.length > 70
                           ? `${item.description?.material?.slice(0, 55)}...`
                           : item.description?.material}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </Link>
               </div>

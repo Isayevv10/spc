@@ -45,10 +45,10 @@ export default async function Products() {
                   </div>
                   <div className="list__desc">
                     <h5>{item?.name}</h5>
-                    <div>
+                    {/* <div>
                       <p>{item?.description.brand}</p>
                       <p>{item?.description.standart}...</p>
-                    </div>
+                    </div> */}
                   </div>
                 </Link>
               </div>

@@ -18,7 +18,7 @@ interface IImagesProps {
 
 const CarouselSwiper = ({ pics }: IImagesProps) => {
   return (
-    <div>
+    <>
       <Swiper
         centeredSlides={true}
         slidesPerView={"auto"}
@@ -42,15 +42,13 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
                 src={urlFor(item)!.url()!}
                 alt={"shoes"}
                 unoptimized={true}
-                loading="lazy"
-                width={1796}
-                height={632}
+                fill
               />
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </div>
+    </>
   );
 };
 
