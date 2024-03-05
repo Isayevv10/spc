@@ -13,7 +13,7 @@ import { v4 } from "uuid";
 import { IImages } from "@/types/ProductTypes";
 
 interface IImagesProps {
-  pics: IImages[];
+  pics?: IImages[];
 }
 
 const CarouselSwiper = ({ pics }: IImagesProps) => {
@@ -35,18 +35,22 @@ const CarouselSwiper = ({ pics }: IImagesProps) => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        {pics[0]?.images?.map((item: any, index: number) => {
-          return (
-            <SwiperSlide key={v4()}>
-              <Image
-                src={urlFor(item)!.url()!}
-                alt={"shoes"}
-                unoptimized={true}
-                fill
-              />
-            </SwiperSlide>
-          );
-        })}
+        {pics ? (
+          pics[0]?.images?.map((item: any, index: number) => {
+            return (
+              <SwiperSlide key={v4()}>
+                <Image
+                  src={urlFor(item)!.url()!}
+                  alt={"pics"}
+                  unoptimized={true}
+                  fill
+                />
+              </SwiperSlide>
+            );
+          })
+        ) : (
+          <></>
+        )}
       </Swiper>
     </>
   );

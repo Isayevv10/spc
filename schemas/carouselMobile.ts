@@ -1,10 +1,10 @@
 export default {
-  name: "carousel",
+  name: "carouselMobile",
   type: "document",
-  title: "Carousel Desktop",
+  title: "Carousel Mobile",
   fields: [
     {
-      name: "carousel",
+      name: "carouselMobile",
       title: "Carousel",
       type: "string",
       description: "Name of Carousel",

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "@/styles/pages/_home.scss";
 import "swiper/css/free-mode";
 import "swiper/css";
@@ -8,11 +8,31 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
+import CarouselMobile from "../Carousel/CarouselMobile";
+import Carousel from "../Carousel/Carousel";
 
-const Main = ({ children }: { children: React.ReactNode }) => {
+const Main = () => {
+  const [width, setWidth] = useState<number>(0);
+
+  const handleResize = () => {
+    setWidth(window.screen.width);
+  };
+
+  useEffect(() => {
+    // // Add event listener for resize
+    // window.addEventListener("resize", handleResize);
+
+    // // Clean up the event listener when the component is unmounted
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
+
+    handleResize();
+  }, [width]);
+
   return (
     <>
-      {children}
+      {width < 479 ? <CarouselMobile /> : <Carousel />}
 
       <div className="home">
         <div className="home__content">
@@ -86,7 +106,6 @@ const Main = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
         </div>
-
         <div className="home__brands">
           <Swiper
             slidesPerView={5}
