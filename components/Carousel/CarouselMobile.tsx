@@ -34,10 +34,13 @@ export default function Smaller() {
   useEffect(() => {
     fetchPics();
   }, []);
-  console.log(pics);
 
   if (!pics) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading">
+        <div className="spin"></div>
+      </div>
+    );
   }
 
   return (
