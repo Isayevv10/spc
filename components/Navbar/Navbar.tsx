@@ -78,21 +78,15 @@ const Navbar = () => {
                   isOpenDropDown ? "dropdown-content-mobile" : "hidden"
                 }`}
               >
-                <div>
-                  <Link href="/shoes" className="navlink">
-                    Təhlükəsizlik <span className="spann">ayaqqabıları</span>
-                  </Link>
-                </div>
-                <div>
-                  <Link href="/protectional" className="navlink">
-                    Fərdi mühafizə <span className="spann">vasitələri</span>
-                  </Link>
-                </div>
-                <div>
-                  <Link href="/clothes" className="navlink">
-                    Xüsusi geyimler
-                  </Link>
-                </div>
+                <Link href="/shoes" className="navlink">
+                  Təhlükəsizlik <span className="spann">ayaqqabıları</span>
+                </Link>
+                <Link href="/protectional" className="navlink">
+                  Fərdi mühafizə <span className="spann">vasitələri</span>
+                </Link>
+                <Link href="/clothes" className="navlink">
+                  Xüsusi geyimler
+                </Link>
               </div>
             </li>
 
