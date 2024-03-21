@@ -13,10 +13,13 @@ const Navbar = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
 
   const outsideRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(e: Event) {
       const target = e?.target as Element;
+      console.log(target);
+      console.log(outsideRef);
 
       if (!outsideRef.current?.contains(target as Element)) {
         setIsOpen(false);
@@ -46,69 +49,73 @@ const Navbar = () => {
       <div className="navbar">
         {/* RES NAV  STARTS*/}
 
-        {isOpen ? (
-          <div className="sidemenu__navbar" ref={outsideRef}>
-            <div
-              style={{
-                textAlign: "right",
-              }}
-            >
-              <span onClick={openSideMenu} className="closeSidebar">
-                X
-              </span>
-            </div>
-            <ul className="sidemenu__links">
-              <li>
-                <Link href="/" className="navlink">
-                  Ana səhifə
-                </Link>
-              </li>
-              <li>
-                <div className="dropdown" onClick={openDropDown}>
-                  <Link href="#">
-                    Məhsullar
-                    <span>
-                      <MdArrowDropDown style={{ margin: "0" }} size={20} />{" "}
-                    </span>
-                  </Link>
-                  {isOpenDropDown ? (
-                    <div className="dropdown-content">
-                      <Link href="/shoes" className="navlink">
-                        Təhlükəsizlik{" "}
-                        <span className="spann">ayaqqabıları</span>
-                      </Link>
-                      <Link href="/protectional" className="navlink">
-                        Fərdi mühafizə <span className="spann">vasitələri</span>
-                      </Link>
-                      <Link href="/clothes" className="navlink">
-                        Xüsusi geyimler
-                      </Link>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-                </div>
-              </li>
-              <li>
-                <Link href="/blogs" className="navlink">
-                  Bloq
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="navlink">
-                  Haqqımızda
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="navlink">
-                  Əlaqə
-                </Link>
-              </li>
-            </ul>
+        <div
+          className={`${isOpen ? "sidemenu__navbar" : "hidden"}`}
+          ref={outsideRef}
+        >
+          <div
+            style={{
+              textAlign: "right",
+            }}
+          >
+            <span onClick={openSideMenu} className="closeSidebar">
+              X
+            </span>
           </div>
-        ) : (
-          <></>
-        )}
+          <ul className="sidemenu__links">
+            <li>
+              <Link href="/" className="navlink">
+                Ana səhifə
+              </Link>
+            </li>
+
+            <li>
+              <Link href="#" className="dropdown-mobile" onClick={openDropDown}>
+                Məhsullar
+                <span>
+                  <MdArrowDropDown style={{ margin: "0" }} size={20} />{" "}
+                </span>
+              </Link>
+              <div
+                className={`${
+                  isOpenDropDown ? "dropdown-content-mobile" : "hidden"
+                }`}
+              >
+                <div>
+                  <Link href="/shoes" className="navlink">
+                    Təhlükəsizlik <span className="spann">ayaqqabıları</span>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/protectional" className="navlink">
+                    Fərdi mühafizə <span className="spann">vasitələri</span>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/clothes" className="navlink">
+                    Xüsusi geyimler
+                  </Link>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <Link href="/blogs" className="navlink">
+                Bloq
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="navlink">
+                Haqqımızda
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="navlink">
+                Əlaqə
+              </Link>
+            </li>
+          </ul>
+        </div>
 
         {/* RES NAVBAR ENDS */}
 
@@ -148,6 +155,7 @@ const Navbar = () => {
           </ul>
           <Search />
         </div>
+
         <div className="hamburger" onClick={openSideMenu}>
           {isOpen ? (
             <>X</>

@@ -22,7 +22,6 @@ export const revalidate = 60;
 
 const Blogs = async () => {
   const blogs: IBlogs[] = await getBlogsItems();
-  console.log(blogs);
 
   return (
     <div className="blog__container">
