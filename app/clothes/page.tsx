@@ -11,7 +11,6 @@ const getSpecialClothesQueries = `
                   *[_type == "specialClothes" && category->name == 'SpecialCloth'] {
                     name,
                     "id": _id,
-                    description,
                     "image":images,
                     "slug": slug.current,
                   }`;
@@ -37,21 +36,13 @@ export default async function Products() {
                     <Image
                       src={urlFor(item?.image[0]).url()}
                       width={0}
-                      height={194}
+                      height={0}
                       alt="productPic"
                       unoptimized={true}
-                      objectFit="cover"
                     />
                   </div>
                   <div className="list__desc">
                     <h5>{item?.name}</h5>
-                    {/* <div>
-                      <p>
-                        {item?.description?.material?.length > 70
-                          ? `${item.description?.material?.slice(0, 55)}...`
-                          : item.description?.material}
-                      </p>
-                    </div> */}
                   </div>
                 </Link>
               </div>

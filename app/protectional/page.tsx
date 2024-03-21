@@ -11,7 +11,6 @@ const getSpecialClothesQueries = `
                   *[_type == "protectional" && category->name == 'PPE'] {
                     name,
                     "id": _id,
-                    description,
                     "image":images,
                     "slug": slug.current,
                   }`;
@@ -44,13 +43,6 @@ export default async function Products() {
                   </div>
                   <div className="list__desc">
                     <h5>{item?.name}</h5>
-                    {/* <div>
-                      <p>
-                        {item.description?.material?.length > 70
-                          ? `${item.description?.material.slice(0, 55)}...`
-                          : item.description?.material}
-                      </p>
-                    </div> */}
                   </div>
                 </Link>
               </div>

@@ -13,13 +13,10 @@ const Navbar = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false);
 
   const outsideRef = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(e: Event) {
       const target = e?.target as Element;
-      console.log(target);
-      console.log(outsideRef);
 
       if (!outsideRef.current?.contains(target as Element)) {
         setIsOpen(false);
