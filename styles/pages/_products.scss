@@ -26,11 +26,12 @@
       &__image {
         border-radius: 10px !important;
         margin-bottom: 18px;
+        margin-top: 1px;
         text-align: center;
 
         img {
           width: 79%;
-          height: 142px;
+          height: 149px;
           object-fit: cover;
         }
       }
