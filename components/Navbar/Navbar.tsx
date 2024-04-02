@@ -62,7 +62,7 @@ const Navbar = () => {
           <ul className="sidemenu__links">
             <li>
               <Link href="/" className="navlink">
-                Ana səhifə
+                Ana səhifəeee
               </Link>
             </li>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
           <ul className="links">
             <li>
               <Link rel="preload" href="/" as={""}>
-                Ana səhifə
+                Ana səhifəeee
               </Link>
             </li>
             <li>
