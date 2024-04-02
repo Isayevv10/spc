@@ -49,22 +49,6 @@ const Main = () => {
               uyğun vasitələrlə əməkdaşlarınızın təhlükəsizliyini təmin etməniz
               üçün ideal seçim yaradır.
             </p>
-
-            <div className="downloads">
-              <div className="downloads-costume">
-                <Link href="/catalog.pdf" download="catalog">
-                  <span>{`"Create Industry" məhsul kataloqunu yüklə`}</span>{" "}
-                  <span>
-                    <Image
-                      src={"/icons/download.png"}
-                      alt="download"
-                      width={22}
-                      height={22}
-                    />
-                  </span>
-                </Link>
-              </div>
-            </div>
           </div>
 
           <div className="item-2">

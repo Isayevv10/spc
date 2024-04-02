@@ -9,11 +9,11 @@ const Logo = () => {
       <Link href="/">
         <Image
           alt="createLogo"
-          src={"/images/logo.png"}
+          src={"/images/logospc.jpeg"}
           width={0}
           height={0}
           unoptimized={true}
-          style={{ width: "127px" }}
+          style={{ width: "85px" }}
         />
       </Link>
     </div>

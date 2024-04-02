@@ -7,6 +7,7 @@ import "@/styles/components/_navbar.scss";
 import { Search } from "../Search/Search";
 import Image from "next/image";
 import { MdArrowDropDown } from "react-icons/md";
+import TopNavbar from "../TopNavbar/TopNavbar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -42,7 +43,10 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div>
+      <div>
+        <TopNavbar />
+      </div>
       <div className="navbar">
         {/* RES NAV  STARTS*/}
 
@@ -110,14 +114,11 @@ const Navbar = () => {
 
         {/* RES NAVBAR ENDS */}
 
-        <div className="navbar__logo">
-          <Logo />
-        </div>
         <div className="navbar__link">
           <ul className="links">
             <li>
               <Link rel="preload" href="/" as={""}>
-                Ana səhifəeee
+                Ana səhifə
               </Link>
             </li>
             <li>
@@ -162,7 +163,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
