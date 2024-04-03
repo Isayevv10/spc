@@ -5,10 +5,10 @@
   justify-content: center;
   height: 82px;
   padding: 3px 180px;
-  background-image: url("/images/navbar.png");
   background-position: center;
   background-size: cover;
   position: relative;
+  font-weight: bold;
 
   .hidden {
     display: none;
@@ -125,18 +125,17 @@
           }
 
           .dropdown-content {
-            background-image: url("/images/dropdown.png");
+            background-color: #fff;
             background-position: center;
             background-size: cover;
             display: none;
             position: absolute;
-            background-color: #f00;
             min-width: 200px;
             z-index: 999;
             margin-top: 4px;
 
             a {
-              color: white;
+              color: #000;
               padding: 12px;
               text-decoration: none;
               display: block;
@@ -152,7 +151,7 @@
             }
 
             & a:hover {
-              background-color: #f00;
+              color: rgb(3, 3, 151);
               filter: brightness(220%);
             }
           }
@@ -166,16 +165,15 @@
 
         &:hover {
           border-bottom: 2px solid;
-          color: #fff;
+          color: #000;
         }
 
         a {
           text-decoration: none;
-          color: #fff;
+          color: #000;
           font-size: 17px;
           line-height: 10px;
           letter-spacing: 0.02em;
-          font-weight: 500;
         }
       }
     }
@@ -211,6 +209,10 @@
 @media screen and (min-width: 768px) {
   .navbar {
     .sidemenu__navbar {
+      display: none;
+    }
+
+    .topNavbar {
       display: none;
     }
 

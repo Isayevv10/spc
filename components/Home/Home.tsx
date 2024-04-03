@@ -19,14 +19,6 @@ const Main = () => {
   };
 
   useEffect(() => {
-    // // Add event listener for resize
-    // window.addEventListener("resize", handleResize);
-
-    // // Clean up the event listener when the component is unmounted
-    // return () => {
-    //   window.removeEventListener("resize", handleResize);
-    // };
-
     handleResize();
   }, [width]);
 
@@ -37,17 +29,10 @@ const Main = () => {
       <div className="home">
         <div className="home__content">
           <div className="item-1">
-            <p>CREATE INDUSTRY</p>
+            <p>SPC</p>
             <p>
-              Sağlamlıq və əməyin təhlükəsizliyinin təmin olunması üçün
-              işçilərin xüsusi geyim, ayaqqabı, maskalar və digər fərdi mühafizə
-              vasitələri ilə təmin olunması müstəsnə əhəmiyyət daşıyır.İşçilərin
-              fərdi mühafizə vasitələri ilə təmin olunması qədər, bu vasitələrin
-              mövcüd keyfiyyət standartlarına uyğun hazırlanması da bir o qədər
-              vacib amildir. 2019-cu ildən fəaliyyət göstərən Create İndustry
-              sizə təqdim etdiyi üstün keyfiyyətli və Avropa standartlarına
-              uyğun vasitələrlə əməkdaşlarınızın təhlükəsizliyini təmin etməniz
-              üçün ideal seçim yaradır.
+              Biz sizə zamanında çatdırmaqla ən keyfiyyətli və brend məhsullar
+              təklif edirik
             </p>
           </div>
 

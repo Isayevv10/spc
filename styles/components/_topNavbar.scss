@@ -4,15 +4,16 @@
   align-items: center;
   height: 96px;
   padding: 3px 180px;
-  background-image: url("/images/navbar.png");
   background-size: cover;
   position: relative;
-  color: white;
+  color: #000;
   border-bottom: 2px solid rgba($color: #000000, $alpha: 0.4);
+  font-weight: bold;
 
   &__item--1 {
     display: flex;
     gap: 20px;
+
     p {
       align-items: end;
       margin-left: 90px;
@@ -20,8 +21,7 @@
 
       a {
         text-decoration: none;
-        color: #fff;
-        font-weight: normal;
+        color: #000;
         display: flex;
         column-gap: 3px;
       }
@@ -30,5 +30,14 @@
   &__item--2 {
     text-align: center;
     translate: transform(50%);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topNavbar {
+    display: none;
   }
 }

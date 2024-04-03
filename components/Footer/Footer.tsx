@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import "@/styles/components/_footer.scss";
-import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -25,36 +24,12 @@ const Footer = () => {
         <p className="footer__item--contact-title">Əlaqələr</p>
         <div className="footer__item--contact-details">
           <div>
-            <div>
-              <Image
-                src="/icons/phone.png"
-                alt="phone"
-                width={25}
-                height={25}
-              />
-            </div>
             <div className="context-info">+994 51 215 20 74</div>
           </div>
           <div>
-            <div>
-              <Image
-                src="/icons/msgfooter.png"
-                alt="phone"
-                width={25}
-                height={25}
-              />
-            </div>
-            <div className="context-info">info@createindustry.az</div>
+            <div className="context-info">info@spcgroup.az</div>
           </div>
           <div>
-            <div>
-              <Image
-                src="/icons/location.png"
-                alt="phone"
-                width={25}
-                height={25}
-              />
-            </div>
             <div className="context-info"> Abşeron rayonu, Qobu qəsəbəsi</div>
           </div>
         </div>
@@ -64,22 +39,11 @@ const Footer = () => {
         <p className="footer__item--follow-title">Bizi izləyin</p>
         <div className="footer__item--follow-details">
           <div>
-            <div>
-              <Image src="/icons/wp.png" alt="phone" width={25} height={25} />
-            </div>
             <div className="context-info">
               <Link href="https://wa.link/ac1mcl">Whatsapp</Link>
             </div>
           </div>
           <div>
-            <div>
-              <Image
-                src="/icons/insta.png"
-                alt="phone"
-                width={25}
-                height={25}
-              />
-            </div>
             <div className="context-info">
               <Link href="https://www.instagram.com/createindustry.az/">
                 Instagram
@@ -87,9 +51,6 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div>
-              <Image src="/icons/fb.png" alt="phone" width={25} height={25} />
-            </div>
             <div className="context-info">
               <Link href="https://www.facebook.com/photo.php?fbid=122106376790194513&set=pb.61555835408682.-2207520000&type=3">
                 Facebook

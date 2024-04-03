@@ -10,16 +10,11 @@
     max-width: 250px;
     text-indent: 10px;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 10px;
-    color: white;
 
     &:focus {
       outline: none;
-    }
-
-    &::placeholder {
-      color: #fff;
     }
   }
 

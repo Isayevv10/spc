@@ -4,25 +4,25 @@
   display: flex;
   justify-content: space-around;
   padding: 50px 60px 35px 60px;
-  background-color: #5c5a5a;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border: 1px solid transparent;
+  border-top: 2px solid rgba($color: #000000, $alpha: 0.4);
 
   &__item--contact {
     &-title {
       margin-bottom: 11px;
       font-size: 21px;
       font-weight: 500;
-      padding: 12px 0 12px 30px;
+      padding: 12px 0px;
       letter-spacing: 0.02em;
     }
 
     &-details div {
-      display: flex;
       column-gap: 10px;
       margin-top: 5px;
       .context-info {
-        padding-top: 5px;
+        padding-top: 11px;
       }
     }
   }
@@ -45,7 +45,7 @@
           padding: 0;
           text-decoration: none;
           font-size: 16px;
-          color: #fff;
+          color: #000;
         }
       }
     }
@@ -56,19 +56,18 @@
       margin-bottom: 11px;
       font-size: 21px;
       font-weight: 500;
-      padding: 12px 0 12px 30px;
+      padding: 12px 0px;
       letter-spacing: 0.02em;
     }
 
     &-details div {
-      display: flex;
       column-gap: 10px;
       margin-top: 8px;
       .context-info {
         padding-top: 5px;
         a {
           text-decoration: none;
-          color: #fff;
+          color: #000;
         }
       }
     }
@@ -99,7 +98,6 @@
 
     &__item--links {
       &-title {
-        // margin-bottom: 11px;
         padding: 12px 0 3px 30px;
         letter-spacing: 0.02em;
       }

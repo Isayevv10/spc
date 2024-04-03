@@ -8,7 +8,7 @@
     height: 50px;
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top-color: #f00;
+    border-top-color: #00f;
     animation: spin 1s ease-in-out infinite;
     -webkit-animation: spin 1s ease-in-out infinite;
   }
@@ -36,7 +36,7 @@
     }
     .swiper-button-next,
     .swiper-button-prev {
-      color: red !important;
+      color: #00f !important;
     }
 
     .swiper-pagination-bullet {
@@ -46,7 +46,7 @@
     }
 
     .swiper-pagination-bullet-active {
-      background-color: #f00;
+      background-color: #00f;
     }
   }
 
