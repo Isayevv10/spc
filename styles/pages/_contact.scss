@@ -4,10 +4,10 @@
   justify-content: center;
   column-gap: 25px;
   padding: 52px 200px;
-  background-color: #dad6d1;
+  background-color: #eeefed;
 
   .contact__mail {
-    border: 1px solid #f00;
+    border: 1px solid #00f;
     padding: 20px;
     border-radius: 5px;
 
@@ -17,7 +17,7 @@
       #phone,
       #ad,
       #email {
-        color: #f00;
+        color: #00f;
         font-size: 13px;
         margin-top: 5px;
       }
@@ -36,12 +36,12 @@
         padding: 10px 8px;
         border: 1px solid #5c5a5a;
         border-radius: 4px;
-        background-color: #dad6d1;
+        background-color: #eeefed;
 
         &:focus,
         &:hover {
-          border: 1px solid #f00;
-          outline: #f00;
+          border: 1px solid #00f;
+          outline: #00f;
         }
       }
 
@@ -51,14 +51,14 @@
           resize: vertical;
           padding: 6px 10px;
           border: 1px solid #5c5a5a;
-          outline: #f00;
-          background-color: #dad6d1;
+          outline: #00f;
+          background-color: #eeefed;
           border-radius: 4px;
 
           &:focus,
           &:hover {
-            border: 1px solid #f00;
-            outline: #f00;
+            border: 1px solid #00f;
+            outline: #00f;
           }
         }
       }
@@ -78,7 +78,7 @@
   }
 
   .contact__info {
-    border: 1px solid #f00;
+    border: 1px solid #00f;
     border-radius: 5px;
     letter-spacing: 0.02em;
     display: flex;
