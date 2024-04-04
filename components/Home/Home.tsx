@@ -7,7 +7,6 @@ import "swiper/css";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import Link from "next/link";
 import CarouselMobile from "../Carousel/CarouselMobile";
 import Carousel from "../Carousel/Carousel";
 

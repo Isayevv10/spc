@@ -11,7 +11,7 @@ const TopNavbar = () => {
         <Logo />
         <p>
           <Link href="/spcCatalog.pdf" download="catalog">
-            <span>{`Kataloqu yükləmək`}</span>{" "}
+            <span>{`Kataloqu yüklə`}</span>{" "}
           </Link>
         </p>
       </div>
