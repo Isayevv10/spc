@@ -22,9 +22,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    background-image: url("/images/sidemenu.png");
-    background-position: center;
-    background-size: cover;
+    background-color: #3157a2;
 
     .closeSidebar {
       color: #fff;
@@ -72,7 +70,7 @@
           }
 
           & a:hover {
-            background-color: #f00;
+            background-color: rgb(10, 48, 171);
             filter: brightness(230%);
           }
         }

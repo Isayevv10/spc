@@ -64,7 +64,7 @@ const Navbar = () => {
             <ul className="sidemenu__links">
               <li>
                 <Link href="/" className="navlink">
-                  Ana səhifəeee
+                  Ana səhifə
                 </Link>
               </li>
 
@@ -97,8 +97,8 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link href="/blogs" className="navlink">
-                  Bloq
+                <Link href="/sales" className="navlink">
+                  Satış
                 </Link>
               </li>
               <li>
@@ -138,7 +138,7 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <Link href="/blogs">Bloq</Link>
+                <Link href="/sales">Satış</Link>
               </li>
               <li>
                 <Link href="/about">Haqqımızda</Link>
@@ -157,8 +157,8 @@ const Navbar = () => {
                 <Image
                   src="/icons/hamburger.png"
                   alt="navbar"
-                  width={25}
-                  height={25}
+                  width={27}
+                  height={27}
                 />
               </button>
             )}

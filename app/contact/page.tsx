@@ -78,6 +78,49 @@ const Contact = () => {
   return (
     <>
       <div className="contact">
+        <div className="contact__info">
+          <div className="contact__info--adres">
+            <Image
+              src="/icons/address.png"
+              width={70}
+              height={70}
+              alt="adres"
+            />
+            <div>
+              <h1>Ünvan</h1>
+              <p>Sumqayıt şəhəri, Bulvar küç.61 A</p>
+            </div>
+          </div>
+
+          <div className="contact__info--contact">
+            <Image
+              src="/icons/contact.png"
+              alt="contact"
+              width={70}
+              height={70}
+            />
+            <div>
+              <h1>Telefon</h1>
+              <p>+994 50 210 36 84</p>
+            </div>
+          </div>
+
+          <div className="contact__info--email">
+            <div>
+              <Image
+                src="/icons/email.png"
+                alt="contact"
+                width={70}
+                height={70}
+              />
+            </div>
+            <div>
+              <h1>Email</h1>
+              <p>info@spcgroup.az</p>
+            </div>
+          </div>
+        </div>
+
         <div className="contact__mail">
           <div className="grid__form">
             <div className="item-1">
@@ -136,8 +179,7 @@ const Contact = () => {
               <label htmlFor="uname">Mesajınız</label>
               <textarea
                 name="message"
-                cols={30}
-                rows={7}
+                rows={6}
                 value={emailData.message}
                 required
                 onChange={handleChange}
@@ -151,49 +193,6 @@ const Contact = () => {
           <button type="submit" className="btn__submit" onClick={handleSubmit}>
             Göndər
           </button>
-        </div>
-
-        <div className="contact__info">
-          <div className="contact__info--adres">
-            <Image
-              src="/icons/address.png"
-              width={70}
-              height={70}
-              alt="adres"
-            />
-            <div>
-              <h1>Ünvan</h1>
-              <p>Abşeron rayonu, Qobu qəsəbəsi</p>
-            </div>
-          </div>
-
-          <div className="contact__info--contact">
-            <Image
-              src="/icons/contact.png"
-              alt="contact"
-              width={70}
-              height={70}
-            />
-            <div>
-              <h1>Telefon</h1>
-              <p>+994 51 215 20 74</p>
-            </div>
-          </div>
-
-          <div className="contact__info--email">
-            <div>
-              <Image
-                src="/icons/email.png"
-                alt="contact"
-                width={70}
-                height={70}
-              />
-              <div>
-                <h1>Email</h1>
-                <p>info@createindustry.az</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>

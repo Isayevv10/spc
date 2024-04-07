@@ -74,7 +74,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="home__brands">
+        {/* <div className="home__brands">
           <Swiper
             slidesPerView={5}
             spaceBetween={30}
@@ -164,7 +164,7 @@ const Main = () => {
               />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </>
   );

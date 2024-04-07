@@ -20,7 +20,7 @@ const getBlogsItems = () => {
 
 export const revalidate = 60;
 
-const Blogs = async () => {
+const Sales = async () => {
   const blogs: IBlogs[] = await getBlogsItems();
 
   return (
@@ -47,4 +47,4 @@ const Blogs = async () => {
   );
 };
 
-export default Blogs;
+export default Sales;

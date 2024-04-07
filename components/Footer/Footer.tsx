@@ -24,13 +24,16 @@ const Footer = () => {
         <p className="footer__item--contact-title">Əlaqələr</p>
         <div className="footer__item--contact-details">
           <div>
-            <div className="context-info">+994 51 215 20 74</div>
+            <div className="context-info">+994 50 210 36 84</div>
           </div>
           <div>
             <div className="context-info">info@spcgroup.az</div>
           </div>
           <div>
-            <div className="context-info"> Abşeron rayonu, Qobu qəsəbəsi</div>
+            <div className="context-info">
+              {" "}
+              Sumqayıt şəhəri, Bulvar küç.61 A
+            </div>
           </div>
         </div>
       </div>
