@@ -26,36 +26,46 @@ const About = () => {
         <div className="about__content">
           <div className="about__content__item-1">
             <div className="readMore--desktop">
-              “CREATE İNDUSTRY” 2019 -cu ildən Azərbaycanda işçi ayaqqabıları və
-              rezin çəkmələrin istehsalını həyata keçirir. Şirkət bu günədək
-              müxtəlif özəl və dövlət sifarişlərini müvəffəqiyyətlə yerinə
-              yetirmişdir. Create Industry sifarişin dərhal yerinə yetirilməsi
-              üçün daim anbarında müxtəlif çeşid hazır ayaqqabı modelləri
-              saxlayır. Şirkətin maddi-texniki bazası və çalışan
-              mütəxəssislərinin yüksək peşəkarlığı görülən işlərin keyfiyyətli,
-              vaxtında və zəmanətlə yerinə yetirilməsini təmin edir. İşçi
-              ayaqqabılarının və rezin çəkmələrin istehsalı üzrə AZS və ISO -TÜV
-              Avstriya sertifikatlarını almış “CREATE İNDUSTRY” partnyor
-              şirkətlərin və fərdi müştərilərin etimadını və etibarını qorumaqla
-              müxtəlif şəraitdə və sahələrdə çalışan hər bir işçiyə ehtiyac
-              duyduğu təhlükəsizliyi, davamlılığı və rahatlığı təklif edir.
+              2016-cı ildə fəaliyyət göstərən SPC şirkətinin əsas fəaliyyət
+              istiqamətləri işçi geyimləri istehsalı, eyni zamanda distribütoru
+              olduğu digər qism fərdi mühafizə vasitələrinin isə ən keyfiyyətli
+              məhsulların istehsalçıları olan tanınmış firmaların məhsullarının
+              idxalıdır. SPC şirkəti bu günədək çox sayda dövlət və özəl
+              sifarişləri icra edərək istehlakçılara yüksək keyfiyyətli
+              məhsullar təklif etdiyini praktiki olaraq sübut etmişdir.
+              Əməkdaşlıq nəticəsində istehlakçıların tələblərinin ən yüksək
+              səviyyədə təmin olunmasını prioritet olaraq müəyyən edən şirkət öz
+              məhsullarını əyani olaraq nəzərdən keçirmək və sifarişləri
+              zamanında qarşı tərəfə təhvil verməyə xüsusi önəm veririk, bunun
+              üçün anbarımızda çox sayda və müxtəlif kateqoriyalı məhsullar
+              saxlayırıq. Siz də ən yüksək keyfiyyətli fərdi mühafizə
+              vasitələri, xüsusi geyimlər, təhlükəsizlik ayaqqabıları əldə edib
+              əməkdaşlarınızı keyfiyyətli iş geyimləri,ayaqqabılar və
+              vasitələrlə təmin etməyi üşünürsünüzsə o zaman bizə müraciət edin
+              və razı qalın!
             </div>
 
             <div className="readMore--mobile">
               <p>
-                {truncate(`“CREATE İNDUSTRY” 2019 -cu ildən Azərbaycanda işçi ayaqqabıları və
-            rezin çəkmələrin istehsalını həyata keçirir. Şirkət bu günədək
-            müxtəlif özəl və dövlət sifarişlərini müvəffəqiyyətlə yerinə
-            yetirmişdir. Create Industry sifarişin dərhal yerinə yetirilməsi
-            üçün daim anbarında müxtəlif çeşid hazır ayaqqabı modelləri
-            saxlayır. Şirkətin maddi-texniki bazası və çalışan mütəxəssislərinin
-            yüksək peşəkarlığı görülən işlərin keyfiyyətli, vaxtında və
-            zəmanətlə yerinə yetirilməsini təmin edir. İşçi ayaqqabılarının və
-            rezin çəkmələrin istehsalı üzrə AZS və ISO -TÜV Avstriya
-            sertifikatlarını almış “CREATE İNDUSTRY” partnyor şirkətlərin və
-            fərdi müştərilərin etimadını və etibarını qorumaqla müxtəlif
-            şəraitdə və sahələrdə çalışan hər bir işçiyə ehtiyac duyduğu
-            təhlükəsizliyi, davamlılığı və rahatlığı təklif edir.`)}
+                {truncate(
+                  `2016-cı ildə fəaliyyət göstərən SPC şirkətinin əsas fəaliyyət
+                  istiqamətləri işçi geyimləri və ayaqqabılarının istehsalı, eyni
+                  zamanda distribütoru olduğu digər qism fərdi mühafizə
+                  vasitələrinin isə ən keyfiyyətli məhsulların istehsalçıları olan
+                  tanınmış firmaların məhsullarının idxalıdır. SPC şirkəti bu
+                  günədək çox sayda dövlət və özəl sifarişləri icra edərək
+                  istehlakçılara yüksək keyfiyyətli məhsullar təklif etdiyini
+                  praktiki olaraq sübut etmişdir. Əməkdaşlıq nəticəsində
+                  istehlakçıların tələblərinin ən yüksək səviyyədə təmin olunmasını
+                  prioritet olaraq müəyyən edən şirkət öz məhsullarını əyani olaraq
+                  nəzərdən keçirmək və sifarişləri zamanında qarşı tərəfə təhvil
+                  verməyə xüsusi önəm veririk, bunun üçün anbarımızda çox sayda və
+                  müxtəlif kateqoriyalı məhsullar saxlayırıq. Siz də ən yüksək
+                  keyfiyyətli fərdi mühafizə vasitələri, xüsusi geyimlər,
+                  təhlükəsizlik ayaqqabıları əldə edib əməkdaşlarınızı keyfiyyətli
+                  iş geyimləri,ayaqqabılar və vasitələrlə təmin etməyi üşünürsünüzsə
+                  o zaman bizə müraciət edin və razı qalın!`
+                )}
               </p>
               <button onClick={readMore}>...Davamını oxu</button>
             </div>

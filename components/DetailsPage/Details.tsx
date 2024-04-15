@@ -39,7 +39,7 @@ const Details = ({ products }: IProductProps) => {
   });
 
   return (
-    <>
+    <div className="details__product">
       <div className="main">
         {products?.image[0] ? (
           <Image
@@ -71,25 +71,27 @@ const Details = ({ products }: IProductProps) => {
       </div>
 
       <div className="thumbs">
-        {products?.image?.map((item, index) => {
-          return (
-            <div
-              key={v4()}
-              className="eachThumbs"
-              onClick={() => setSelectedItem(index)}
-            >
-              <Image
-                src={urlFor(products?.image[index]).url()}
-                alt={"shoes"}
-                width={93}
-                height={64}
-                unoptimized={true}
-              />
-            </div>
-          );
-        })}
+        <div>
+          {products?.image?.map((item, index) => {
+            return (
+              <div
+                key={v4()}
+                className="eachThumbs"
+                onClick={() => setSelectedItem(index)}
+              >
+                <Image
+                  src={urlFor(products?.image[index]).url()}
+                  alt={"shoes"}
+                  width={93}
+                  height={64}
+                  unoptimized={true}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

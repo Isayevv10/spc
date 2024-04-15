@@ -27,51 +27,67 @@ const Main = () => {
 
       <div className="home">
         <div className="home__content">
-          <div className="item-1">
+          {/* <div className="item-1">
             <p>SPC</p>
             <p>
-              Biz sizə zamanında çatdırmaqla ən keyfiyyətli və brend məhsullar
-              təklif edirik
+              2016-cı ildə fəaliyyət göstərən SPC şirkətinin əsas fəaliyyət
+              istiqamətləri işçi geyimləri və ayaqqabılarının istehsalı, eyni
+              zamanda distribütoru olduğu digər qism fərdi mühafizə
+              vasitələrinin isə ən keyfiyyətli məhsulların istehsalçıları olan
+              tanınmış firmaların məhsullarının idxalıdır. SPC şirkəti bu
+              günədək çox sayda dövlət və özəl sifarişləri icra edərək
+              istehlakçılara yüksək keyfiyyətli məhsullar təklif etdiyini
+              praktiki olaraq sübut etmişdir. Əməkdaşlıq nəticəsində
+              istehlakçıların tələblərinin ən yüksək səviyyədə təmin olunmasını
+              prioritet olaraq müəyyən edən şirkət öz məhsullarını əyani olaraq
+              nəzərdən keçirmək və sifarişləri zamanında qarşı tərəfə təhvil
+              verməyə xüsusi önəm veririk, bunun üçün anbarımızda çox sayda və
+              müxtəlif kateqoriyalı məhsullar saxlayırıq. Siz də ən yüksək
+              keyfiyyətli fərdi mühafizə vasitələri, xüsusi geyimlər,
+              təhlükəsizlik ayaqqabıları əldə edib əməkdaşlarınızı keyfiyyətli
+              iş geyimləri, ayaqqabılar və vasitələrlə təmin etməyi düşünürsünüzsə
+              o zaman bizə müraciət edin və razı qalın!
             </p>
+          </div> */}
+
+          <div className="client">
+            <div className="client-item-1">
+              <Image src="/icons/client.png" alt="" width={59} height={59} />
+            </div>
+            <div className="client-item-2">
+              <p>Müştəri məmnuniyyəti</p>
+              <p>Şirkətin əsas hədəflərindən biri müştəri məmnuniyyətidir.</p>
+            </div>
+            <div>01</div>
           </div>
 
-          <div className="item-2">
-            <div className="client">
-              <div className="client-item-1">
-                <Image src="/icons/client.png" alt="" width={62} height={62} />
-              </div>
-              <div className="client-item-2">
-                <p>Müştəri məmnuniyyəti</p>
-                <p>Şirkətin əsas hədəflərindən biri müştəri məmnuniyyətidir.</p>
-              </div>
+          <div className="worker">
+            <div className="worker-item-1">
+              <Image src="/icons/worker.png" alt="" width={59} height={59} />
             </div>
+            <div className="worker-item-2">
+              <p>Təcrübəli və peşəkar kadrlar</p>
+              <p>
+                Şirkətin maddi-texniki bazası və mütəxəssislərinin yüksək
+                peşəkarlığı görülən işlərin keyfiyyətlə, vaxtında və zəmanətlə
+                yerinə yetirilməsini təmin edir
+              </p>
+            </div>
+            <div>02</div>
+          </div>
 
-            <div className="worker">
-              <div className="worker-item-1">
-                <Image src="/icons/worker.png" alt="" width={62} height={62} />
-              </div>
-              <div className="worker-item-2">
-                <p>Təcrübəli və peşəkar kadrlar</p>
-                <p>
-                  Şirkətin maddi-texniki bazası və mütəxəssislərinin yüksək
-                  peşəkarlığı görülən işlərin keyfiyyətlə, vaxtında və zəmanətlə
-                  yerinə yetirilməsini təmin edir
-                </p>
-              </div>
+          <div className="depo">
+            <div className="depo-item-1">
+              <Image src="/icons/depo.png" alt="" width={59} height={59} />
             </div>
-
-            <div className="depo">
-              <div className="depo-item-1">
-                <Image src="/icons/depo.png" alt="" width={62} height={62} />
-              </div>
-              <div className="depo-item-2">
-                <p>Anbarlama</p>
-                <p>
-                  Daimi olaraq hazır məhsul anbarında bir çox modelləri
-                  saxlayırıq.
-                </p>
-              </div>
+            <div className="depo-item-2">
+              <p>Anbarlama</p>
+              <p>
+                Daimi olaraq hazır məhsul anbarında bir çox modelləri
+                saxlayırıq.
+              </p>
             </div>
+            <div>03</div>
           </div>
         </div>
         {/* <div className="home__brands">
